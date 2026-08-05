@@ -49,16 +49,21 @@ export function Navbar() {
           >
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2.5 shrink-0">
-              <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-neon-blue flex items-center justify-center shadow-glow">
-                <span className="font-display font-bold text-lg text-ink-950">RK</span>
-                <div className="absolute inset-0 rounded-xl border border-white/20" />
-              </div>
-              <div className="hidden sm:block">
-                <div className="font-display font-bold text-base leading-none">RK Tech</div>
-                <div className="text-[10px] tracking-[0.2em] text-slate-400 uppercase">Solutions</div>
-              </div>
-            </Link>
+  <img
+    src="/logo.svg"
+    alt="RK Tech Solutions"
+    className="w-10 h-10 object-contain"
+  />
 
+  <div className="hidden sm:block">
+    <div className="font-display font-bold text-base leading-none">
+      RK Tech
+    </div>
+    <div className="text-[10px] tracking-[0.2em] text-slate-400 uppercase">
+      Solutions
+    </div>
+  </div>
+</Link>
             {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-7">
               <NavLink to="/" className={navLinkClass} end>Home</NavLink>
