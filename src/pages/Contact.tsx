@@ -94,7 +94,7 @@ export default function Contact() {
                           value={form.name}
                           onChange={(e) => setForm({ ...form, name: e.target.value })}
                           className="w-full glass rounded-xl px-4 py-3 text-sm outline-none focus:border-neon-blue/50 transition-colors"
-                          placeholder="John Doe"
+                          placeholder="Your Name"
                         />
                       </div>
                       <div>
