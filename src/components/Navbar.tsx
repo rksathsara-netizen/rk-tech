@@ -52,7 +52,7 @@ export function Navbar() {
   <img
     src="/logo.svg"
     alt="RK Tech Solutions"
-    className="w-50 h-50 object-contain"
+    className="w-15 h-15 object-contain"
   />
 
   <div className="hidden sm:block">
