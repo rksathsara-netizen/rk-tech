@@ -55,7 +55,7 @@ public/
 ## Business Info
 
 - **Name**: RK Tech Solutions
-- **Location**: No. 45, Colombo Road, Piliyandala 10300, Sri Lanka
-- **Phone**: +94 77 123 4567
-- **Email**: info@rktechsolutions.lk
+- **Location**: Piliyandala , Sri Lanka
+- **Phone**: +94 75 678 9046
+- **Email**: rksolution.k@gmail.com
 - **Hours**: Mon–Sat 9AM–8PM, Sun 10AM–5PM

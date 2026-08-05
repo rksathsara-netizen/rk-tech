@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
             We may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.
           </Section>
           <Section title="9. Contact Us">
-            If you have questions about this privacy policy or our data practices, please contact us at info@rktechsolutions.lk or call +94 77 123 4567.
+            If you have questions about this privacy policy or our data practices, please contact us at info@rktechsolutions.lk or call +94 75 678 9046.
           </Section>
         </div>
       </div>

@@ -40,7 +40,7 @@ export default function Terms() {
             RK Tech Solutions is not liable for indirect, incidental, or consequential damages arising from our services. Our total liability is limited to the amount paid for the specific service or product.
           </Section>
           <Section title="10. Contact">
-            For questions about these Terms, contact us at info@rktechsolutions.lk or +94 77 123 4567.
+            For questions about these Terms, contact us at info@rktechsolutions.lk or +94 75 678 9046.
           </Section>
         </div>
       </div>

@@ -37,7 +37,7 @@ export type Review = {
 export const business = {
   name: 'RK Tech Solutions',
   tagline: 'Your Trusted Tech Partner',
-  phone: '+94 77 123 4567',
+  phone: '+94 75 678 9046',
   phoneRaw: '94771234567',
   email: 'info@rktechsolutions.lk',
   address: 'No. 45, Colombo Road, Piliyandala 10300, Sri Lanka',
