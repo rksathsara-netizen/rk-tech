@@ -11,9 +11,13 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2.5 mb-5">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary-500 to-neon-blue flex items-center justify-center shadow-glow">
-                <span className="font-display font-bold text-lg text-ink-950">RK</span>
-              </div>
+              <div className="flex items-center gap-3">
+  <img
+    src="/logo.svg"
+    alt="RK Tech Solutions"
+    className="h-14 w-auto"
+  />
+</div>
               <div>
                 <div className="font-display font-bold text-lg leading-none">RK Tech Solutions</div>
                 <div className="text-[10px] tracking-[0.2em] text-slate-500 uppercase mt-1">Computer Shop & Repair</div>
