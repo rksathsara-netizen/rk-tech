@@ -105,7 +105,7 @@ export default function Contact() {
                           value={form.phone}
                           onChange={(e) => setForm({ ...form, phone: e.target.value })}
                           className="w-full glass rounded-xl px-4 py-3 text-sm outline-none focus:border-neon-blue/50 transition-colors"
-                          placeholder="077 123 4567"
+                          placeholder="07X XXX XXXX"
                         />
                       </div>
                     </div>
