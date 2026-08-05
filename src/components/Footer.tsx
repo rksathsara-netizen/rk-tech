@@ -15,7 +15,7 @@ export function Footer() {
   <img
     src="/logo.svg"
     alt="RK Tech Solutions"
-    className="h-17.5 w-auto"
+    className="h-17 w-auto"
   />
 </div>
               <div>
