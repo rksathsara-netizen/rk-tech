@@ -59,7 +59,7 @@ export function Navbar() {
     <div className="font-display font-bold text-base leading-none">
       RK Tech
     </div>
-    <div className="text-[10px] tracking-[0.2em] text-slate-400 uppercase">
+    <div className="text-[100px] tracking-[0.2em] text-slate-400 uppercase">
       Solutions
     </div>
   </div>
