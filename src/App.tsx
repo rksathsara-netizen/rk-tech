@@ -46,7 +46,7 @@ function Shell() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
             {/* <Route path="/repair-status" element={<RepairStatus />} /> */}
-            <Route path="/warranty-checker" element={<WarrantyChecker />} />
+            {/* <Route path="/warranty-checker" element={<WarrantyChecker />} /> */}
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<NotFound />} />

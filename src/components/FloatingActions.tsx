@@ -48,14 +48,14 @@ export function FloatingActions() {
         <ArrowUp className="w-5 h-5" />
       </button>
 
-      {/* Tools toggle */}
+      {/* Tools toggle
       <button
         onClick={() => setToolsOpen(!toolsOpen)}
         aria-label="Quick tools"
         className="w-11 h-11 rounded-full glass flex items-center justify-center hover:border-neon-blue/50 transition-colors"
       >
         <Wrench className={`w-5 h-5 transition-transform duration-300 ${toolsOpen ? 'rotate-90' : ''}`} />
-      </button>
+      </button> */}
 
       {/* Call */}
       <a
