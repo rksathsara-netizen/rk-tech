@@ -20,7 +20,7 @@ const iconMap: Record<string, typeof Cpu> = {
 
 const floatIcons = [Cpu, Monitor, Laptop, Gamepad2, Network, HardDriveDownload, ShieldCheck, Wrench];
 
-const heroWords = ['Repair.', 'Accessories.', 'Build.', 'Visits.'];
+const heroWords = ['Repair.', 'Accessories.', 'Visits.'];
 
 export default function Home() {
   useReveal();
@@ -132,7 +132,7 @@ function Hero({ typed }: { typed: string }) {
   <span className="typing-cursor" />
   <br />
 
-  <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+  <span className="bg-gradient-to-r from-cyan-400 via-blue-600 to-purple-600 bg-clip-text text-transparent">
     RK Tech Solutions
   </span>
 </h1>
