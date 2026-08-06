@@ -132,7 +132,7 @@ function Hero({ typed }: { typed: string }) {
   <span className="typing-cursor" />
   <br />
 
-  <span className="text-slate-100 font-extrabold tracking-[0.15em] uppercase">
+  <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent font-extrabold tracking-wide">
     R K Tech Solutions
   </span>
 </h1>
