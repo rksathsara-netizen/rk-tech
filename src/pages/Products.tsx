@@ -34,7 +34,7 @@ export default function Products() {
         />
 
         {/* Search + filter bar */}
-        <div className="reveal mt-12 glass-card p-5 flex flex-col lg:flex-row gap-4 items-stretch lg:items-center">
+        <div className="mt-12 glass-card p-5 flex flex-col lg:flex-row gap-4 items-stretch lg:items-center">
           <div className="relative flex-1">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
             <input
@@ -61,7 +61,7 @@ export default function Products() {
         </div>
 
         {/* Category pills */}
-        <div className="reveal mt-6 flex flex-wrap gap-2">
+        <div className="mt-6 flex flex-wrap gap-2">
           {productCategories.map((cat) => (
             <button
               key={cat}
