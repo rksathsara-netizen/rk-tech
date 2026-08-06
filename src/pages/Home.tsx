@@ -125,16 +125,26 @@ function Hero({ typed }: { typed: string }) {
           <span className="text-xs sm:text-sm text-slate-300">Now serving Piliyandala &amp; nearby areas</span>
         </div>
 
-        <h1 className="reveal reveal-delay-1 font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] text-balance">
-          We <span className="gradient-text">{typed || 'Repair.'}</span>
-          <span className="typing-cursor" />
-          <br />
-          <span className="text-slate-200">So You Don't Have To.</span>
-        </h1>
+        <<h1 className="reveal reveal-delay-1 font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] text-balance">
+  Sri Lanka's Trusted
+  <br />
+  <span className="gradient-text">{typed || "Computer Shop"}</span>
+</h1>
 
-        <p className="reveal reveal-delay-2 mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 leading-relaxed text-balance">
-          Sri Lanka's trusted computer shop and repair center. Laptops, desktops, gaming PCs, CCTV, networking, data recovery — all under one roof in Piliyandala.
-        </p>
+        <p className="reveal reveal-delay-2 mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-slate-400 leading-relaxed text-balance">
+  Your one-stop destination for laptops, desktops, gaming PCs, CCTV,
+  networking, printers, accessories and professional repair services.
+
+  <br />
+  <br />
+
+  <span className="text-slate-200 font-medium">
+    ✓ Genuine Products &nbsp;&nbsp;
+    ✓ Expert Technicians &nbsp;&nbsp;
+    ✓ Islandwide Delivery &nbsp;&nbsp;
+    ✓ Warranty Included
+  </span>
+</p>
 
         <div className="reveal reveal-delay-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Magnetic>
@@ -148,7 +158,41 @@ function Hero({ typed }: { typed: string }) {
             </Link>
           </Magnetic>
         </div>
+{/* WhatsApp CTA */}
+<div className="reveal reveal-delay-4 mt-6 flex justify-center">
+  <a
+    href={business.social.whatsapp}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#25D366]/30"
+  >
+    <svg
+      className="w-5 h-5"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
+    </svg>
+    Chat on WhatsApp
+  </a>
+</div>
 
+{/* Trust Badges */}
+<div className="reveal reveal-delay-4 mt-8 flex flex-wrap items-center justify-center gap-3">
+  {[
+    "🛡 Genuine Warranty",
+    "⚡ Same Day Repairs",
+    "🚚 Islandwide Delivery",
+    "⭐ 5000+ Happy Customers",
+  ].map((badge) => (
+    <div
+      key={badge}
+      className="glass rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:text-white"
+    >
+      {badge}
+    </div>
+  ))}
+</div>
         {/* Quick stats */}
         <div className="reveal reveal-delay-4 mt-16 grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto">
           {[
