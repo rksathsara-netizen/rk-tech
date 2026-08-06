@@ -157,8 +157,8 @@ function Hero({ typed }: { typed: string }) {
         {/* Quick stats */}
         <div className="reveal reveal-delay-4 mt-16 grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto">
           {[
-            { value: '5,000+', label: 'Devices Repaired' },
-            { value: '8+', label: 'Years Experience' },
+            { value: '95%', label: 'Devices Repaired' },
+            { value: '6+', label: 'Years Experience' },
             { value: '4.9★', label: 'Customer Rating' },
           ].map((s) => (
             <div key={s.label} className="glass rounded-2xl py-4 px-3">

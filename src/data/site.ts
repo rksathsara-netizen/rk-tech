@@ -61,7 +61,7 @@ export const services: Service[] = [
     tagline: 'Expert diagnostics and repair for all laptop brands',
     description: 'From cracked screens to dead motherboards, our certified technicians repair all major laptop brands including Dell, HP, Lenovo, ASUS, Acer, and Apple. We use genuine parts and back every repair with a warranty.',
     features: ['Screen replacement', 'Keyboard repair', 'Battery replacement', 'Charging port fix', 'Hinge repair', 'Liquid damage recovery', 'Motherboard-level repair', 'BIOS/UEFI flashing'],
-    startingPrice: 'Rs. 2,500',
+    startingPrice: 'Contact for Pricing',
     duration: 'Same day – 3 days',
   },
   {
@@ -72,7 +72,7 @@ export const services: Service[] = [
     tagline: 'Comprehensive desktop PC repair and upgrades',
     description: 'Whether your desktop won\'t boot, keeps crashing, or just needs a performance boost, we diagnose and fix it fast. Hardware and software issues, component upgrades, thermal repasting, and full system optimization.',
     features: ['Power supply replacement', 'RAM upgrades', 'SSD/HDD installation', 'GPU installation', 'Thermal repasting', 'Dust cleaning', 'POST diagnostics', 'Driver troubleshooting'],
-    startingPrice: 'Rs. 2,000',
+    startingPrice: 'Contact for Pricing',
     duration: 'Same day – 2 days',
   },
   {
@@ -83,7 +83,7 @@ export const services: Service[] = [
     tagline: 'Custom gaming rigs built for your budget and dreams',
     description: 'Tell us your budget and favorite games — we\'ll build the perfect gaming PC. From entry-level 1080p rigs to 4K ultra beasts, every build is cable-managed, stress-tested, and benchmarked before delivery.',
     features: ['Custom part selection', 'RGB lighting setup', 'Cable management', 'Liquid cooling install', 'Overclocking & tuning', 'Stress testing', '3DMark benchmarking', 'Game optimization'],
-    startingPrice: 'Rs. 150,000',
+    startingPrice: 'Contact for Pricing',
     duration: '3 – 5 days',
   },
   {
@@ -94,7 +94,7 @@ export const services: Service[] = [
     tagline: 'Home and office network setup and troubleshooting',
     description: 'Wi-Fi dead zones? Slow internet? Need a wired office network? We design, install, and configure networks that just work. From mesh Wi-Fi to enterprise switches, we handle it all.',
     features: ['Wi-Fi mesh setup', 'Router configuration', 'LAN cabling', 'Network switch install', 'Firewall setup', 'VPN configuration', 'Bandwidth optimization', 'Network security audit'],
-    startingPrice: 'Rs. 3,500',
+    startingPrice: 'Contact for Pricing',
     duration: '1 – 2 days',
   },
   {
@@ -105,7 +105,7 @@ export const services: Service[] = [
     tagline: 'Professional security camera installation and monitoring',
     description: 'Protect your home or business with professional CCTV systems. We supply, install, and configure HD and IP camera systems with remote viewing, night vision, and motion alerts — all accessible from your phone.',
     features: ['HD/IP camera install', 'DVR/NVR setup', 'Remote mobile viewing', 'Night vision cameras', 'Motion detection alerts', 'Cloud storage setup', 'Wiring & mounting', 'Annual maintenance'],
-    startingPrice: 'Rs. 25,000',
+    startingPrice: 'Contact for Pricing',
     duration: '1 – 3 days',
   },
   {
@@ -116,7 +116,7 @@ export const services: Service[] = [
     tagline: 'Recover lost files from any drive, any condition',
     description: 'Accidentally deleted files? Corrupted drive? Dropped your external HDD? Our data recovery specialists use advanced tools to recover data from HDDs, SSDs, USB drives, and memory cards — even from physically damaged drives.',
     features: ['Logical recovery', 'Physical recovery', 'Partition repair', 'RAW drive recovery', 'Formatted drive recovery', 'Photo & video recovery', 'Encrypted drive recovery', 'Confidential handling'],
-    startingPrice: 'Rs. 5,000',
+    startingPrice: 'Contact for Pricing',
     duration: '1 – 5 days',
   },
   {
@@ -127,7 +127,7 @@ export const services: Service[] = [
     tagline: 'Fast fixes for inkjet and laser printers',
     description: 'Paper jams, streaky prints, connectivity issues — we repair all printer types and brands. Inkjet, laser, all-in-one, and thermal printers serviced with genuine parts and consumables.',
     features: ['Paper jam fix', 'Print head cleaning', 'Ink system flush', 'Roller replacement', 'Network printer setup', 'Driver installation', 'Toner refill', 'Maintenance kit service'],
-    startingPrice: 'Rs. 1,500',
+    startingPrice: 'Contact for Pricing',
     duration: 'Same day – 2 days',
   },
   {
@@ -138,7 +138,7 @@ export const services: Service[] = [
     tagline: 'Clean installs and setup of any software',
     description: 'Operating systems, office suites, design tools, development environments — we install and configure everything properly, with genuine licenses and proper activation.',
     features: ['Windows installation', 'Microsoft Office setup', 'Antivirus installation', 'Driver packs', 'Design software setup', 'Development tools', 'Software activation', 'System optimization'],
-    startingPrice: 'Rs. 1,000',
+    startingPrice: 'Contact for Pricing',
     duration: 'Same day',
   },
   {
@@ -149,7 +149,7 @@ export const services: Service[] = [
     tagline: 'Deep malware, virus, and spyware elimination',
     description: 'Is your computer acting strange? Pop-ups, slow performance, suspicious programs? We perform deep-scan virus removal, clean every trace of malware, and install robust protection to prevent reinfection.',
     features: ['Deep malware scan', 'Ransomware removal', 'Browser hijack fix', 'Adware removal', 'Rootkit elimination', 'System hardening', 'Antivirus setup', 'Security consultation'],
-    startingPrice: 'Rs. 2,000',
+    startingPrice: 'Contact for Pricing',
     duration: 'Same day – 1 day',
   },
   {
@@ -160,7 +160,7 @@ export const services: Service[] = [
     tagline: 'Clean, genuine Windows installation with full setup',
     description: 'Fresh Windows 10/11 installation with all drivers, essential software, and optimization. We back up your data first, install genuine OS, and configure everything for peak performance.',
     features: ['Windows 10/11 install', 'Genuine activation', 'Driver installation', 'Data backup & transfer', 'Essential software setup', 'System optimization', 'Partition management', 'Boot repair'],
-    startingPrice: 'Rs. 1,500',
+    startingPrice: 'Contact for Pricing',
     duration: 'Same day',
   },
   {
@@ -171,7 +171,7 @@ export const services: Service[] = [
     tagline: 'Component-level motherboard diagnostics and repair',
     description: 'Our advanced technicians perform component-level motherboard repair using micro-soldering, thermal imaging, and oscilloscope diagnostics. We fix what others call "unrepairable."',
     features: ['Micro-soldering', 'Chip replacement', 'Power circuit repair', 'Thermal imaging diag', 'BGA reflow/reballing', 'Capacitor replacement', 'Short circuit detection', 'POST code analysis'],
-    startingPrice: 'Rs. 4,500',
+    startingPrice: 'Contact for Pricing',
     duration: '2 – 7 days',
   },
 ];
