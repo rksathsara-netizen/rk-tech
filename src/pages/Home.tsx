@@ -128,13 +128,18 @@ function Hero({ typed }: { typed: string }) {
         </div>
 
         <h1 className="reveal reveal-delay-1 font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
-  We <span className="gradient-text">{typed || 'Repair.'}</span>
+  We <span className="gradient-text">{typed || "Repair."}</span>
   <span className="typing-cursor" />
   <br />
 
-  <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent font-extrabold tracking-wide">
-    R K Tech Solutions
-  </span>
+  <motion.span
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent"
+  >
+    RK Tech Solutions
+  </motion.span>
 </h1>
 
         <p className="reveal reveal-delay-2 mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 leading-relaxed text-balance">
