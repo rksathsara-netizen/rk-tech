@@ -25,7 +25,7 @@ export default function Products() {
   }, [category, search, sort]);
 
   return (
-    <div className="pt-8 md:pt-28 pb-20">
+    <div className="pt-4 md:pt-20 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <SectionHeading
           eyebrow="Our Products"
@@ -61,7 +61,7 @@ export default function Products() {
         </div>
 
         {/* Category pills */}
-        <div className="mt-6 flex flex-wrap gap-2">
+        <div className="mt-6 flex flex-wrap gap-3">
           {productCategories.map((cat) => (
             <button
               key={cat}
