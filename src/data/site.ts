@@ -193,10 +193,10 @@ export const products: Product[] = [
 
 export const reviews: Review[] = [
   { id: 'r1', name: 'Dinusha Perera', rating: 5, text: 'My laptop had a completely dead motherboard and three other shops said it was unrepairable. RK Tech fixed it in two days for a fair price. Absolute lifesavers!', date: '2024-12-15', service: 'Laptop Repair', avatar: 'DP' },
-  { id: 'r2', name: 'Saman Silva', rating: 5, text: 'Built me a gaming PC that runs everything on ultra at 1440p. The cable management is a work of art. Highly recommend for any gamer in Piliyandala.', date: '2024-12-10', service: 'Gaming PC Build', avatar: 'SS' },
+  { id: 'r2', name: 'Saman Silva', rating: 6, text: 'Built me a gaming PC that runs everything on ultra at 1440p. The cable management is a work of art. Highly recommend for any gamer in Piliyandala.', date: '2024-12-10', service: 'Gaming PC Build', avatar: 'SS' },
   { id: 'r3', name: 'Nadeesha Fernando', rating: 5, text: 'They came to my home to set up the entire CCTV system. Professional, on time, and the mobile app makes checking cameras so easy. Very happy.', date: '2024-11-28', service: 'CCTV Installation', avatar: 'NF' },
-  { id: 'r4', name: 'Kasun Rajapaksa', rating: 5, text: 'Recovered all my wedding photos from a corrupted USB drive. I thought they were gone forever. Worth every rupee. Thank you RK Tech!', date: '2024-11-20', service: 'Data Recovery', avatar: 'KR' },
-  { id: 'r5', name: 'Amaya Wickrama', rating: 5, text: 'Fast and honest service. They diagnosed my desktop issue for free and the repair was done same-day. No unnecessary upselling like other shops.', date: '2024-11-15', service: 'Desktop Repair', avatar: 'AW' },
+  { id: 'r4', name: 'Kasun Rajapaksa', rating: 5.5, text: 'Recovered all my wedding photos from a corrupted USB drive. I thought they were gone forever. Worth every rupee. Thank you RK Tech!', date: '2024-11-20', service: 'Data Recovery', avatar: 'KR' },
+  { id: 'r5', name: 'Pubudu Nayanamini', rating: 6, text: 'Fast and honest service. They diagnosed my desktop issue for free and the repair was done same-day. No unnecessary upselling like other shops.', date: '2024-11-15', service: 'Desktop Repair', avatar: 'AW' },
   { id: 'r6', name: 'Tharindu Madushanka', rating: 5, text: 'Set up mesh Wi-Fi across my entire house. No more dead zones in any room. The team really knows their stuff with networking.', date: '2024-11-08', service: 'Networking', avatar: 'TM' },
 ];
 
