@@ -20,7 +20,7 @@ const iconMap: Record<string, typeof Cpu> = {
 
 const floatIcons = [Cpu, Monitor, Laptop, Gamepad2, Network, HardDriveDownload, ShieldCheck, Wrench];
 
-const heroWords = ['Repairing.'];
+const heroWords = ['Repair.'];
 
 export default function Home() {
   useReveal();
@@ -362,9 +362,9 @@ export function ProductCard({ product, delay = 0 }: { product: typeof products[0
 
 /* ============ STATS ============ */
 function StatsSection() {
-  const r1 = useCounter(5000);
-  const r2 = useCounter(8);
-  const r3 = useCounter(1200);
+  const r1 = useCounter(95%);
+  const r2 = useCounter(6);
+  const r3 = useCounter(100%);
   const r4 = useCounter(98);
   return (
     <section className="section-pad relative">
@@ -407,7 +407,7 @@ function HomeVisit() {
               Can't bring your device to us? <span className="gradient-text">We'll come to you.</span>
             </h2>
             <p className="reveal reveal-delay-2 text-slate-400 leading-relaxed mb-6">
-              We offer on-site service for networking installations, CCTV setup, desktop repairs, and printer issues across Piliyandala and nearby areas. Just pick up the phone and we'll be at your door.
+              We offer on-site service for networking installations, CCTV setup, desktop repairs, and printer issues across Colombo and nearby areas. Just pick up the phone and we'll be at your door.
             </p>
             <div className="reveal reveal-delay-3 flex flex-wrap gap-3">
               <a href={`tel:${business.phoneRaw}`} className="btn-primary">
@@ -425,7 +425,7 @@ function HomeVisit() {
                 <HomeIcon className="w-12 h-12 text-neon-blue" />
               </div>
               <div className="font-display text-2xl font-bold">On-Site Service</div>
-              <div className="text-sm text-slate-400 mt-1">Piliyandala &amp; suburbs</div>
+              <div className="text-sm text-slate-400 mt-1">Colombo &amp; suburbs</div>
             </div>
           </div>
         </div>

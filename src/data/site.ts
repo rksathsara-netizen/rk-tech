@@ -209,7 +209,7 @@ export const productCategories = ['All', 'Gaming Laptops', 'Laptops', 'Gaming PC
 export const faqs = [
   { q: 'Do you offer same-day repairs?', a: 'Yes! Most common repairs like screen replacements, battery swaps, software issues, and virus removal are completed same-day. Complex repairs like motherboard-level work may take 2–7 days depending on parts availability.' },
   { q: 'Do you provide a warranty on repairs?', a: 'Absolutely. Every repair comes with a minimum 30-day service warranty. Parts replacements carry the manufacturer warranty (typically 1–5 years). We stand behind every repair we do.' },
-  { q: 'Do you offer home/office visits?', a: 'Yes, we provide on-site service for networking, CCTV installation, and certain desktop/printer issues within Piliyandala and nearby areas. Call us to schedule a visit.' },
+  { q: 'Do you offer home/office visits?', a: 'Yes, we provide on-site service for networking, CCTV installation, and certain desktop/printer issues within Colombo and nearby areas. Call us to schedule a visit.' },
   { q: 'How much does a diagnostic cost?', a: 'Diagnostics are completely free. We\'ll assess your device, identify the problem, and give you a transparent quote before any work begins. No hidden charges.' },
   { q: 'Can you recover data from a physically damaged drive?', a: 'In most cases, yes. We use advanced tools for both logical and physical data recovery. For severely damaged drives, we partner with specialized clean-room facilities. Bring it in for a free assessment.' },
   { q: 'Do you sell genuine products with warranty?', a: 'Yes. All products we sell are 100% genuine with manufacturer warranty. We are authorized dealers for many major brands and every product receipt includes full warranty details.' },
@@ -229,5 +229,5 @@ export const whyChooseUs = [
   { icon: 'Home', title: 'We Come To You', desc: 'On-site service for networking, CCTV, and desktop issues across Piliyandala.' },
   { icon: 'Award', title: 'Certified Technicians', desc: 'Our team holds certifications from CompTIA, Microsoft, and major hardware vendors.' },
   { icon: 'Wallet', title: 'Transparent Pricing', desc: 'Free diagnostics, upfront quotes, and no hidden fees. You approve before we start.' },
-  { icon: 'Clock', title: '6 Days a Week', desc: 'Open Monday through Saturday 9AM–8PM, and Sundays 10AM–5PM for your convenience.' },
+  { icon: 'Clock', title: '7 Days a Week', desc: 'Open Monday through to Saturday 9AM–8PM, and Sundays 10AM–5PM for your convenience.' },
 ];
