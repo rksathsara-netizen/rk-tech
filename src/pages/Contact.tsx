@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, Check, FaWhatsapp } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, Check, MessageCircle  } from 'lucide-react';
 import { SectionHeading } from '@/components/SectionHeading';
 import { useReveal } from '@/hooks/useReveal';
 import { business, services } from '@/data/site';
@@ -60,7 +60,7 @@ export default function Contact() {
             >
               <div className="flex items-center gap-4">
                 <div className="w-11 h-11 rounded-xl bg-[#25D366]/10 flex items-center justify-center shrink-0">
-                  <FaWhatsapp className="w-5 h-5 text-[#25D366]" />
+                  <MessageCircle  className="w-5 h-5 text-[#25D366]" />
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">WhatsApp</div>
