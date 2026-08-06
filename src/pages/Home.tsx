@@ -122,7 +122,9 @@ function Hero({ typed }: { typed: string }) {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
           </span>
-          <span className="text-xs sm:text-sm text-slate-400">Home &amp; Office Visits Available in Colombo</span>
+          <span className="text-sm sm:text-base font-extrabold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent tracking-wide">
+  Home & Office Visits Available in Colombo
+</span>
         </div>
 
         <h1 className="reveal reveal-delay-1 font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] text-balance">
