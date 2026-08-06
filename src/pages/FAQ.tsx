@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, MessageCircle } from 'lucide-react';
+import { ChevronDown, FaWhatsapp } from 'lucide-react';
 import { SectionHeading } from '@/components/SectionHeading';
 import { useReveal } from '@/hooks/useReveal';
 import { faqs, business } from '@/data/site';
@@ -42,7 +42,7 @@ export default function FAQ() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href={`tel:${business.phoneRaw}`} className="btn-primary">Call Us</a>
             <a href={business.social.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-ghost">
-              <MessageCircle className="w-4 h-4" /> WhatsApp Us
+              <FaWhatsapp className="w-4 h-4" /> WhatsApp Us
             </a>
           </div>
         </div>

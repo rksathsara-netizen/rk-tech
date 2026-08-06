@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Phone, ArrowUp, Wrench, ShieldCheck } from 'lucide-react';
+import { FaWhatsapp, Phone, ArrowUp, Wrench, ShieldCheck } from 'lucide-react';
 import { business } from '@/data/site';
 
 export function FloatingActions() {
@@ -74,7 +74,7 @@ export function FloatingActions() {
         aria-label="WhatsApp"
         className="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_30px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform relative"
       >
-        <MessageCircle className="w-7 h-7 text-white" />
+       <FaWhatsapp className="w-7 h-7 text-white" />
         <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
       </a>
     </div>

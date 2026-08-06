@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Youtube, MessageCircle, Mail, Phone, MapPin, Clock, ArrowUpRight } from 'lucide-react';
+import { Facebook, Instagram, Youtube, FaWhatsapp, Mail, Phone, MapPin, Clock, ArrowUpRight } from 'lucide-react';
 import { business, services } from '@/data/site';
 
 export function Footer() {
@@ -31,7 +31,7 @@ export function Footer() {
                 { icon: Facebook, href: business.social.facebook, label: 'Facebook' },
                 { icon: Instagram, href: business.social.instagram, label: 'Instagram' },
                 { icon: Youtube, href: business.social.youtube, label: 'YouTube' },
-                { icon: MessageCircle, href: business.social.whatsapp, label: 'WhatsApp' },
+                { icon: FaWhatsapp, href: business.social.whatsapp, label: 'WhatsApp' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
