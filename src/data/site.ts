@@ -38,7 +38,7 @@ export const business = {
   name: 'RK Tech Solutions',
   tagline: 'Your Trusted Tech Partner',
   phone: '+94 75 678 9046',
-  phoneRaw: '94771234567',
+  phoneRaw: '94756789046',
   email: 'info@rktechsolutions.lk',
   address: 'No. 45, Colombo Road, Piliyandala 10300, Sri Lanka',
   addressShort: 'Piliyandala, Sri Lanka',
@@ -47,7 +47,7 @@ export const business = {
   social: {
     facebook: 'https://www.facebook.com/rktechsolutions',
     instagram: 'https://www.instagram.com/rktechsolutions',
-    whatsapp: 'https://wa.me/94771234567',
+    whatsapp: 'https://wa.me/94756789046',
     youtube: 'https://www.youtube.com/@rktechsolutions',
   },
 };
