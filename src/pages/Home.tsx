@@ -362,9 +362,9 @@ export function ProductCard({ product, delay = 0 }: { product: typeof products[0
 
 /* ============ STATS ============ */
 function StatsSection() {
-  const r1 = useCounter(95%);
+  const r1 = useCounter(95);
   const r2 = useCounter(6);
-  const r3 = useCounter(100%);
+  const r3 = useCounter(99);
   const r4 = useCounter(98);
   return (
     <section className="section-pad relative">
@@ -374,9 +374,9 @@ function StatsSection() {
           <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-primary-500/10 blur-3xl" />
           <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { ref: r1, suffix: '+', label: 'Devices Repaired' },
+              { ref: r1, suffix: '%', label: 'Devices Repaired' },
               { ref: r2, suffix: '+', label: 'Years of Experience' },
-              { ref: r3, suffix: '+', label: 'Happy Customers' },
+              { ref: r3, suffix: '%', label: 'Happy Customers' },
               { ref: r4, suffix: '%', label: 'Satisfaction Rate' },
             ].map((s) => (
               <div key={s.label}>
