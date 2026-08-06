@@ -20,7 +20,7 @@ const iconMap: Record<string, typeof Cpu> = {
 
 const floatIcons = [Cpu, Monitor, Laptop, Gamepad2, Network, HardDriveDownload, ShieldCheck, Wrench];
 
-const heroWords = ['Repair.', 'Upgrade.', 'Build.', 'Recover.'];
+const heroWords = ['Repair.', 'Accessories.', 'Build.', 'Visits.'];
 
 export default function Home() {
   useReveal();
@@ -127,12 +127,15 @@ function Hero({ typed }: { typed: string }) {
 </span>
         </div>
 
-        <h1 className="reveal reveal-delay-1 font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] text-balance">
-          We <span className="gradient-text">{typed || 'Repair.'}</span>
-          <span className="typing-cursor" />
-          <br />
-          <span className="text-slate-200">So You Don't Have To.</span>
-        </h1>
+        <h1 className="reveal reveal-delay-1 font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
+  We <span className="gradient-text">{typed || 'Repair.'}</span>
+  <span className="typing-cursor" />
+  <br />
+
+  <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+    RK Tech Solutions
+  </span>
+</h1>
 
         <p className="reveal reveal-delay-2 mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 leading-relaxed text-balance">
           Sri Lanka's trusted computer shop and repair center. Laptops, desktops, gaming PCs, CCTV, networking, data recovery — all under one roof in Piliyandala.
