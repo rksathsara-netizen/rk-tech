@@ -6,7 +6,7 @@ import { useReveal } from '@/hooks/useReveal';
 import { products, productCategories, business, type Product } from '@/data/site';
 
 export default function Products() {
-  useReveal();
+  // useReveal();
   const [category, setCategory] = useState('All');
   const [search, setSearch] = useState('');
   const [sort, setSort] = useState('featured');
@@ -82,7 +82,7 @@ export default function Products() {
           {filtered.map((p, i) => (
             <div
               key={p.id}
-              className={`reveal reveal-delay-${(i % 4) + 1} group glass-card overflow-hidden hover:border-neon-blue/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-luxury`}
+              className="group glass-card overflow-hidden hover:border-neon-blue/30 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <ProductImage name={p.name} image={p.image} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
