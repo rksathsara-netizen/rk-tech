@@ -20,7 +20,7 @@ const iconMap: Record<string, typeof Cpu> = {
 
 const floatIcons = [Cpu, Monitor, Laptop, Gamepad2, Network, HardDriveDownload, ShieldCheck, Wrench];
 
-const heroWords = ['Repair.', 'Accessories.', 'Visits.'];
+const heroWords = ['Repairing.'];
 
 export default function Home() {
   useReveal();
