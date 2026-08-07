@@ -151,7 +151,10 @@ return matchCat && matchAccessory && matchSearch;
 </button>
 
       <button
-  onClick={() => setAccessoryType('HDD')}
+  onClick={() => {
+  window.history.pushState({ accessory: 'HDD' }, '', window.location.href);
+  setAccessoryType('HDD');
+}}
   className="group glass-card overflow-hidden text-left hover:border-cyan-400/50 transition-all"
 >
   <div className="h-52 bg-slate-900/50 flex items-center justify-center overflow-hidden">
@@ -170,7 +173,10 @@ return matchCat && matchAccessory && matchSearch;
 </button>
 
       <button
-  onClick={() => setAccessoryType('SSD')}
+  onClick={() => {
+  window.history.pushState({ accessory: 'SSD' }, '', window.location.href);
+  setAccessoryType('SSD');
+}}
   className="group glass-card overflow-hidden text-left hover:border-cyan-400/50 transition-all"
 >
   <div className="h-52 bg-slate-900/50 flex items-center justify-center overflow-hidden">
