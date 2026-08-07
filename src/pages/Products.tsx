@@ -13,6 +13,20 @@ export default function Products() {
   const [accessoryType, setAccessoryType] = useState<string | null>(null);
   const [quickView, setQuickView] = useState<Product | null>(null);
 
+  useEffect(() => {
+  const handleBack = () => {
+    if (accessoryType) {
+      setAccessoryType(null);
+    }
+  };
+
+  window.addEventListener('popstate', handleBack);
+
+  return () => {
+    window.removeEventListener('popstate', handleBack);
+  };
+}, [accessoryType]);
+
 const openQuickView = (product: Product) => {
   window.history.pushState({ quickView: true }, '', window.location.href);
   setQuickView(product);
@@ -115,7 +129,10 @@ return matchCat && matchAccessory && matchSearch;
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <button
-  onClick={() => setAccessoryType('RAM')}
+  onClick={() => {
+  window.history.pushState({ accessory: 'RAM' }, '', window.location.href);
+  setAccessoryType('RAM');
+}}
   className="group glass-card overflow-hidden text-left hover:border-cyan-400/50 transition-all"
 >
   <div className="h-52 bg-slate-900/50 flex items-center justify-center overflow-hidden">
