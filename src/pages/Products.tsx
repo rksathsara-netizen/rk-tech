@@ -84,8 +84,12 @@ export default function Products() {
               key={p.id}
               className="group glass-card overflow-hidden hover:border-neon-blue/30 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <ProductImage name={p.name} image={p.image} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="relative aspect-[4/3] overflow-hidden bg-slate-900/40">
+                <ProductImage
+                name={p.name}
+                image={p.image}
+                className="w-full h-full object-contain p-5 transition-all duration-500 group-hover:scale-110"
+               />
                 <div className="absolute top-3 left-3 flex flex-col gap-1.5">
                   {p.badge === 'new' && <span className="badge bg-green-500/90 text-white">NEW</span>}
                   {p.badge === 'Used' && <span className="badge bg-red-500/90 text-white">Used</span>}
