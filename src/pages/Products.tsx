@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Search, SlidersHorizontal, X, Star, ChevronRight, CheckCircle2, XCircle,ShieldCheck } from "lucide-react";
 import { SectionHeading } from '@/components/SectionHeading';
 import { ProductImage } from '@/components/ProductImage';
@@ -12,6 +12,26 @@ export default function Products() {
   const [sort, setSort] = useState('featured');
   const [accessoryType, setAccessoryType] = useState<string | null>(null);
   const [quickView, setQuickView] = useState<Product | null>(null);
+
+useEffect(() => {
+  const handleBack = () => {
+    setQuickView(null);
+  };
+
+  window.addEventListener('popstate', handleBack);
+
+  if (quickView) {
+    window.history.pushState(
+      { quickView: true },
+      '',
+      window.location.href
+    );
+  }
+
+  return () => {
+    window.removeEventListener('popstate', handleBack);
+  };
+}, [quickView]);  
 
   const filtered = useMemo(() => {
     let result = products.filter((p) => {
