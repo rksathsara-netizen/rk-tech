@@ -9,7 +9,7 @@ export default function Products() {
   // useReveal();
   const [category, setCategory] = useState('All');
   const [search, setSearch] = useState('');
-  const [sort, setSort] = useState('featured');,
+  const [sort, setSort] = useState('featured');
   const [accessoryType, setAccessoryType] = useState<string | null>(null);
   const [quickView, setQuickView] = useState<Product | null>(null);
 
