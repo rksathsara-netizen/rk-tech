@@ -9,7 +9,8 @@ export default function Products() {
   // useReveal();
   const [category, setCategory] = useState('All');
   const [search, setSearch] = useState('');
-  const [sort, setSort] = useState('featured');
+  const [sort, setSort] = useState('featured');,
+  const [accessoryType, setAccessoryType] = useState<string | null>(null);
   const [quickView, setQuickView] = useState<Product | null>(null);
 
   const filtered = useMemo(() => {
@@ -76,6 +77,59 @@ export default function Products() {
             </button>
           ))}
         </div>
+
+{/* Accessories Categories */}
+{category === 'Accessories' && !accessoryType && (
+  <div className="mt-10">
+    <h2 className="font-display text-2xl font-bold mb-2">
+      Accessories
+    </h2>
+
+    <p className="text-sm text-slate-400 mb-6">
+      Choose a category
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <button
+        onClick={() => setAccessoryType('RAM')}
+        className="glass-card p-8 text-left hover:border-cyan-400/50 transition-all"
+      >
+        <h3 className="font-display text-2xl font-bold">
+          RAM
+        </h3>
+        <p className="text-sm text-slate-400 mt-2">
+          Laptop RAM
+        </p>
+      </button>
+
+      <button
+        onClick={() => setAccessoryType('HDD')}
+        className="glass-card p-8 text-left hover:border-cyan-400/50 transition-all"
+      >
+        <h3 className="font-display text-2xl font-bold">
+          HDD
+        </h3>
+        <p className="text-sm text-slate-400 mt-2">
+          Hard Disk Drives
+        </p>
+      </button>
+
+      <button
+        onClick={() => setAccessoryType('SSD')}
+        className="glass-card p-8 text-left hover:border-cyan-400/50 transition-all"
+      >
+        <h3 className="font-display text-2xl font-bold">
+          SSD
+        </h3>
+        <p className="text-sm text-slate-400 mt-2">
+          Solid State Drives
+        </p>
+      </button>
+
+    </div>
+  </div>
+)}
 
         {/* Products grid */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
