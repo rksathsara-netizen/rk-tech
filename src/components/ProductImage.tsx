@@ -40,8 +40,9 @@ export function ProductImage({ name, image, className }: { name: string; image: 
   return (
     <img
       src={image}
-      alt={name}
+      alt={`${name} - RK Tech Solutions`}
       loading="lazy"
+      draggable={false}
       className={className}
     />
   );
@@ -50,8 +51,9 @@ export function ProductImage({ name, image, className }: { name: string; image: 
   return (
     <img
       src={`data:image/svg+xml,${encoded}`}
-      alt={name}
+      alt={`${name} - RK Tech Solutions`}
       loading="lazy"
+      draggable={false}
       className={className}
     />
   );
