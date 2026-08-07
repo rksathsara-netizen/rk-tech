@@ -141,7 +141,7 @@ return matchCat && matchAccessory && matchSearch;
 >
   <div className="h-52 bg-slate-900/50 flex items-center justify-center overflow-hidden">
     <img
-      src="/products/ram-8gb.jpg"
+      src="/products/ram.jpeg"
       alt="RAM"
       className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500"
     />
@@ -163,7 +163,7 @@ return matchCat && matchAccessory && matchSearch;
 >
   <div className="h-52 bg-slate-900/50 flex items-center justify-center overflow-hidden">
     <img
-      src="/products/1tb.jpeg"
+      src="/products/hdd.jpeg"
       alt="HDD"
       className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500"
     />
@@ -185,7 +185,7 @@ return matchCat && matchAccessory && matchSearch;
 >
   <div className="h-52 bg-slate-900/50 flex items-center justify-center overflow-hidden">
     <img
-      src="/products/ssd-500gb.jpg"
+      src="/products/ssd.jpeg"
       alt="SSD"
       className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500"
     />
