@@ -140,7 +140,7 @@ export default function GamingPCs() {
                 <div className="grid sm:grid-cols-2 gap-0">
                   <div className="relative aspect-square sm:aspect-auto">
                     <ProductImage name={p.name} image={p.image} className="w-full h-full object-cover" />
-                    {p.badge === 'sale' && <span className="absolute top-3 left-3 badge bg-red-500/90 text-white">SALE</span>}
+                    {p.badge === 'Used' && <span className="absolute top-3 left-3 badge bg-red-500/90 text-white">Used</span>}
                   </div>
                   <div className="p-6 flex flex-col justify-center">
                     <div className="flex items-center gap-1 mb-2">

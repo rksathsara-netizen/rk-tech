@@ -322,7 +322,7 @@ export function ProductCard({ product, delay = 0 }: { product: typeof products[0
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-1.5">
           {product.badge === 'new' && <span className="badge bg-green-500/90 text-white">NEW</span>}
-          {product.badge === 'sale' && <span className="badge bg-red-500/90 text-white">SALE</span>}
+          {product.badge === 'Used' && <span className="badge bg-red-500/90 text-white">Used</span>}
           {product.badge === 'warranty' && <span className="badge bg-primary-500/90 text-white"><ShieldCheck className="w-3 h-3" /> {product.warranty}</span>}
         </div>
         {/* Quick view */}

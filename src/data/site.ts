@@ -6,7 +6,7 @@ export type Product = {
   oldPrice?: number;
   image: string;
   rating: number;
-  badge?: 'new' | 'sale' | 'warranty';
+  badge?: 'new' | 'Used' | 'warranty';
   warranty: string;
   description: string;
   specs: string[];
@@ -177,20 +177,20 @@ export const services: Service[] = [
 ];
 
 export const products: Product[] = [
-  { id: 'p1', name: 'ASUS ROG Strix G16', category: 'Gaming Laptops', price: 425000, oldPrice: 450000, image: 'gaming-laptop', rating: 5, badge: 'sale', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
+  { id: 'p1', name: 'ASUS ROG Strix G16', category: 'Gaming Laptops', price: 425000, oldPrice: 450000, image: 'gaming-laptop', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
   { id: 'p2', name: 'Dell XPS 15 OLED', category: 'Laptops', price: 385000, image: 'ultrabook', rating: 5, badge: 'new', warranty: '1-Year Warranty', description: 'Intel i7, 16GB, 512GB SSD, 15.6" 3.5K OLED touch display', specs: ['Intel Core i7-13700H', '16GB DDR5', '512GB SSD', '15.6" 3.5K OLED Touch', 'Intel Iris Xe'] },
-  { id: 'p3', name: 'Custom RTX 4070 Gaming PC', category: 'Gaming PCs', price: 295000, oldPrice: 320000, image: 'gaming-pc', rating: 5, badge: 'sale', warranty: '3-Year Warranty', description: 'Ryzen 7 7800X3D, RTX 4070 Super, 32GB DDR5, 2TB NVMe', specs: ['Ryzen 7 7800X3D', 'RTX 4070 Super 12GB', '32GB DDR5 6000MHz', '2TB NVMe SSD', '850W Gold PSU'] },
+  { id: 'p3', name: 'Custom RTX 4070 Gaming PC', category: 'Gaming PCs', price: 295000, oldPrice: 320000, image: 'gaming-pc', rating: 5, badge: 'Used', warranty: '3-Year Warranty', description: 'Ryzen 7 7800X3D, RTX 4070 Super, 32GB DDR5, 2TB NVMe', specs: ['Ryzen 7 7800X3D', 'RTX 4070 Super 12GB', '32GB DDR5 6000MHz', '2TB NVMe SSD', '850W Gold PSU'] },
   { id: 'p4', name: 'Samsung 990 Pro 2TB SSD', category: 'Components', price: 45000, image: 'ssd', rating: 5, badge: 'warranty', warranty: '5-Year Warranty', description: 'PCIe 4.0 NVMe, up to 7450 MB/s read, 6900 MB/s write', specs: ['2TB Capacity', 'PCIe 4.0 x4', '7450 MB/s Read', '6900 MB/s Write', 'M.2 2280'] },
   { id: 'p5', name: 'Logitech G Pro X Keyboard', category: 'Accessories', price: 28500, image: 'keyboard', rating: 4, badge: 'new', warranty: '2-Year Warranty', description: 'Wireless mechanical gaming keyboard with GX Blue switches', specs: ['Wireless / Wired', 'GX Blue Switches', 'RGB LIGHTSYNC', 'Aircraft-grade aluminum', '30M keystroke life'] },
-  { id: 'p6', name: 'HP 24" FHD Monitor', category: 'Monitors', price: 32000, oldPrice: 38000, image: 'monitor', rating: 4, badge: 'sale', warranty: '3-Year Warranty', description: '24" IPS panel, 1080p, 75Hz, built-in speakers, VESA mount', specs: ['24" IPS Display', '1920x1080', '75Hz Refresh', 'Built-in Speakers', 'VESA 100x100'] },
+  { id: 'p6', name: 'HP 24" FHD Monitor', category: 'Monitors', price: 32000, oldPrice: 38000, image: 'monitor', rating: 4, badge: 'Used', warranty: '3-Year Warranty', description: '24" IPS panel, 1080p, 75Hz, built-in speakers, VESA mount', specs: ['24" IPS Display', '1920x1080', '75Hz Refresh', 'Built-in Speakers', 'VESA 100x100'] },
   { id: 'p7', name: 'Razer DeathAdder V3 Pro', category: 'Accessories', price: 19500, image: 'mouse', rating: 5, badge: 'warranty', warranty: '2-Year Warranty', description: 'Ultra-light wireless gaming mouse, 30K DPI optical sensor', specs: ['63g Ultralight', '30,000 DPI Sensor', '90hr Battery', 'Optical Gen-3 Switches', 'HyperSpeed Wireless'] },
   { id: 'p8', name: 'Custom RTX 4090 4K Beast', category: 'Gaming PCs', price: 850000, image: 'gaming-pc-beast', rating: 5, badge: 'warranty', warranty: '3-Year Warranty', description: 'Ryzen 9 7950X3D, RTX 4090, 64GB DDR5, 4TB NVMe, liquid cooled', specs: ['Ryzen 9 7950X3D', 'RTX 4090 24GB', '64GB DDR5 6000MHz', '4TB NVMe SSD', '1000W Platinum + Liquid Cooling'] },
   { id: 'p9', name: 'Lenovo Legion 5 Pro', category: 'Gaming Laptops', price: 365000, image: 'gaming-laptop-2', rating: 5, badge: 'new', warranty: '2-Year Warranty', description: 'Ryzen 7, RTX 4060, 16GB DDR5, 1TB SSD, 16" QHD 165Hz', specs: ['Ryzen 7 7745HX', 'RTX 4060 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 165Hz'] },
   { id: 'p10', name: 'Corsair RM850e PSU', category: 'Components', price: 28000, image: 'psu', rating: 5, badge: 'warranty', warranty: '7-Year Warranty', description: '850W 80+ Gold, fully modular, ATX 3.0, PCIe 5.0', specs: ['850W', '80 PLUS Gold', 'Fully Modular', 'ATX 3.0', 'PCIe 5.0 12VHPWR'] },
-  { id: 'p11', name: 'Samsung 27" 4K Monitor', category: 'Monitors', price: 95000, oldPrice: 110000, image: 'monitor-4k', rating: 5, badge: 'sale', warranty: '3-Year Warranty', description: '27" UHD IPS, HDR400, 60Hz, USB-C 90W charging', specs: ['27" UHD IPS', '3840x2160', 'HDR400', 'USB-C 90W', 'Height Adjustable'] },
+  { id: 'p11', name: 'Samsung 27" 4K Monitor', category: 'Monitors', price: 95000, oldPrice: 110000, image: 'monitor-4k', rating: 5, badge: 'Used', warranty: '3-Year Warranty', description: '27" UHD IPS, HDR400, 60Hz, USB-C 90W charging', specs: ['27" UHD IPS', '3840x2160', 'HDR400', 'USB-C 90W', 'Height Adjustable'] },
   { id: 'p12', name: 'Acer Aspire 3', category: 'Laptops', price: 125000, image: 'budget-laptop', rating: 4, badge: 'warranty', warranty: '1-Year Warranty', description: 'Intel i5, 8GB, 512GB SSD, 15.6" FHD — great for everyday use', specs: ['Intel Core i5-1235U', '8GB DDR4', '512GB SSD', '15.6" FHD', 'Intel Iris Xe'] },
   { id: 'p13', name: 'DDR4 8GB', category: 'Accessories', price: 13500, image: 'mouse', rating: 5, badge: 'warranty', warranty: '2-Year Warranty', description: 'Ultra-light wireless gaming mouse, 30K DPI optical sensor', specs: ['63g Ultralight', '30,000 DPI Sensor', '90hr Battery', 'Optical Gen-3 Switches', 'HyperSpeed Wireless'] },
-  { id: 'p14', name: 'HDD 1TB', category: 'Accessories', price: 15000, oldPrice: 10000, image: 'gaming-laptop', rating: 5, badge: 'sale', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
+  { id: 'p14', name: 'HDD 1TB', category: 'Accessories', price: 15000, oldPrice: 10000, image: 'gaming-laptop', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
 ];
 
 export const reviews: Review[] = [
@@ -220,7 +220,7 @@ export const faqs = [
 ];
 
 export const offers = [
-  { id: 'o1', title: 'New Year Mega Sale', desc: 'Up to 20% off all gaming laptops & components', code: 'NEWYEAR20', expiry: 'Limited Time', icon: 'Sparkles' },
+  { id: 'o1', title: 'New Year Mega Used', desc: 'Up to 20% off all gaming laptops & components', code: 'NEWYEAR20', expiry: 'Limited Time', icon: 'Sparkles' },
   { id: 'o2', title: 'Free Diagnostic Month', desc: 'Free diagnostics for all repair services — no hidden fees', code: 'FREECHECK', expiry: 'This Month', icon: 'Search' },
   { id: 'o3', title: 'Gaming PC Bundle', desc: 'Free RGB keyboard & mouse with any custom build over Rs. 200K', code: 'RGBBUNDLE', expiry: 'While stocks last', icon: 'Gamepad2' },
 ];
