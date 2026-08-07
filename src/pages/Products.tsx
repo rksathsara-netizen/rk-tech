@@ -13,25 +13,18 @@ export default function Products() {
   const [accessoryType, setAccessoryType] = useState<string | null>(null);
   const [quickView, setQuickView] = useState<Product | null>(null);
 
-useEffect(() => {
-  const handleBack = () => {
+const openQuickView = (product: Product) => {
+  window.history.pushState({ quickView: true }, '', window.location.href);
+  setQuickView(product);
+};
+
+const closeQuickView = () => {
+  if (window.history.state?.quickView) {
+    window.history.back();
+  } else {
     setQuickView(null);
-  };
-
-  window.addEventListener('popstate', handleBack);
-
-  if (quickView) {
-    window.history.pushState(
-      { quickView: true },
-      '',
-      window.location.href
-    );
   }
-
-  return () => {
-    window.removeEventListener('popstate', handleBack);
-  };
-}, [quickView]);  
+};
 
   const filtered = useMemo(() => {
     let result = products.filter((p) => {
@@ -229,7 +222,7 @@ return matchCat && matchAccessory && matchSearch;
 
 </div>
                 <button
-                  onClick={() => setQuickView(p)}
+                  onClick={() => openQuickView(p)}
                   className="absolute inset-0 bg-ink-950/60 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <span className="btn-ghost !py-2.5 !px-5 text-sm">Quick View</span>
@@ -274,10 +267,10 @@ return matchCat && matchAccessory && matchSearch;
 
       {/* Quick view modal */}
       {quickView && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" onClick={() => setQuickView(null)}>
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" onClick={closeQuickView}>
           <div className="absolute inset-0 bg-ink-950/80 backdrop-blur-md" />
           <div className="relative glass-card max-w-3xl w-full max-h-[85vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setQuickView(null)} className="absolute top-4 right-4 w-10 h-10 rounded-full glass flex items-center justify-center hover:border-neon-blue/50 transition-colors z-10">
+            <button onClick={closeQuickView} className="absolute top-4 right-4 w-10 h-10 rounded-full glass flex items-center justify-center hover:border-neon-blue/50 transition-colors z-10">
               <X className="w-5 h-5" />
             </button>
             <div className="grid md:grid-cols-2 gap-0">
