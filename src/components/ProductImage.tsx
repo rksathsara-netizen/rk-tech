@@ -35,6 +35,18 @@ export function ProductImage({ name, image, className }: { name: string; image: 
     <text x="200" y="185" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">RK TECH SOLUTIONS</text>
   </svg>`;
   const encoded = encodeURIComponent(svg).replace(/'/g, '%27').replace(/"/g, '%22');
+
+  if (image.startsWith("/")) {
+  return (
+    <img
+      src={image}
+      alt={name}
+      loading="lazy"
+      className={className}
+    />
+  );
+}
+
   return (
     <img
       src={`data:image/svg+xml,${encoded}`}
