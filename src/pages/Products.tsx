@@ -82,7 +82,7 @@ export default function Products() {
           {filtered.map((p, i) => (
             <div
               key={p.id}
-              className="group glass-card overflow-hidden hover:border-neon-blue/30 transition-all duration-300 hover:-translate-y-1"
+              className="group glass-card overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(34,211,238,0.25)]"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-slate-900/40">
                 <ProductImage
