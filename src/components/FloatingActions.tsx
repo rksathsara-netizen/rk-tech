@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle , Phone, ArrowUp, Wrench, ShieldCheck } from 'lucide-react';
 import { business } from '@/data/site';
+import { FaWhatsapp } from "react-icons/fa";
 
 export function FloatingActions() {
   const [showTop, setShowTop] = useState(false);
