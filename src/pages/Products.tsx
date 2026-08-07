@@ -15,15 +15,25 @@ export default function Products() {
 
   const filtered = useMemo(() => {
     let result = products.filter((p) => {
-      const matchCat = category === 'All' || p.category === category;
-      const matchSearch = p.name.toLowerCase().includes(search.toLowerCase()) || p.description.toLowerCase().includes(search.toLowerCase());
-      return matchCat && matchSearch;
+      const matchCat =
+  category === 'All' || p.category === category;
+
+const matchAccessory =
+  category !== 'Accessories' ||
+  !accessoryType ||
+  p.subcategory === accessoryType;
+
+const matchSearch =
+  p.name.toLowerCase().includes(search.toLowerCase()) ||
+  p.description.toLowerCase().includes(search.toLowerCase());
+
+return matchCat && matchAccessory && matchSearch;
     });
     if (sort === 'price-low') result = [...result].sort((a, b) => a.price - b.price);
     if (sort === 'price-high') result = [...result].sort((a, b) => b.price - a.price);
     if (sort === 'rating') result = [...result].sort((a, b) => b.rating - a.rating);
     return result;
-  }, [category, search, sort]);
+  }, [category, accessoryType, search, sort]);
 
   return (
     <div className="pt-4 md:pt-20 pb-20">
@@ -92,46 +102,77 @@ export default function Products() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <button
-        onClick={() => setAccessoryType('RAM')}
-        className="glass-card p-8 text-left hover:border-cyan-400/50 transition-all"
-      >
-        <h3 className="font-display text-2xl font-bold">
-          RAM
-        </h3>
-        <p className="text-sm text-slate-400 mt-2">
-          Laptop RAM
-        </p>
-      </button>
+  onClick={() => setAccessoryType('RAM')}
+  className="group glass-card overflow-hidden text-left hover:border-cyan-400/50 transition-all"
+>
+  <div className="h-52 bg-slate-900/50 flex items-center justify-center overflow-hidden">
+    <img
+      src="/products/ram-8gb.jpg"
+      alt="RAM"
+      className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500"
+    />
+  </div>
+
+  <div className="p-6">
+    <h3 className="font-display text-2xl font-bold">
+      RAM
+    </h3>
+  </div>
+</button>
 
       <button
-        onClick={() => setAccessoryType('HDD')}
-        className="glass-card p-8 text-left hover:border-cyan-400/50 transition-all"
-      >
-        <h3 className="font-display text-2xl font-bold">
-          HDD
-        </h3>
-        <p className="text-sm text-slate-400 mt-2">
-          Hard Disk Drives
-        </p>
-      </button>
+  onClick={() => setAccessoryType('HDD')}
+  className="group glass-card overflow-hidden text-left hover:border-cyan-400/50 transition-all"
+>
+  <div className="h-52 bg-slate-900/50 flex items-center justify-center overflow-hidden">
+    <img
+      src="/products/1tb.jpeg"
+      alt="HDD"
+      className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500"
+    />
+  </div>
+
+  <div className="p-6">
+    <h3 className="font-display text-2xl font-bold">
+      HDD
+    </h3>
+  </div>
+</button>
 
       <button
-        onClick={() => setAccessoryType('SSD')}
-        className="glass-card p-8 text-left hover:border-cyan-400/50 transition-all"
-      >
-        <h3 className="font-display text-2xl font-bold">
-          SSD
-        </h3>
-        <p className="text-sm text-slate-400 mt-2">
-          Solid State Drives
-        </p>
-      </button>
+  onClick={() => setAccessoryType('SSD')}
+  className="group glass-card overflow-hidden text-left hover:border-cyan-400/50 transition-all"
+>
+  <div className="h-52 bg-slate-900/50 flex items-center justify-center overflow-hidden">
+    <img
+      src="/products/ssd-500gb.jpg"
+      alt="SSD"
+      className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500"
+    />
+  </div>
+
+  <div className="p-6">
+    <h3 className="font-display text-2xl font-bold">
+      SSD
+    </h3>
+  </div>
+</button>
 
     </div>
   </div>
 )}
 
+{category === 'Accessories' && accessoryType && (
+  <button
+    onClick={() => setAccessoryType(null)}
+    className="mt-6 mb-2 text-sm text-slate-400 hover:text-white transition-colors"
+  >
+    ← Back to Accessories
+  </button>
+)}
+
         {/* Products grid */}
+        {(category !== 'Accessories' || accessoryType) && (
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filtered.map((p, i) => (
             <div
@@ -211,6 +252,7 @@ export default function Products() {
             </div>
           ))}
         </div>
+        )}
 
         {filtered.length === 0 && (
           <div className="text-center py-20 text-slate-500">
