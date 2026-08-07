@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Search, SlidersHorizontal, X, ShieldCheck, Star, ChevronRight, CheckCircle2, XCircle } from 'lucide-react';
+import { Search, SlidersHorizontal, X, Star, ChevronRight, CheckCircle2, XCircle } from "lucide-react";
 import { SectionHeading } from '@/components/SectionHeading';
 import { ProductImage } from '@/components/ProductImage';
 import { useReveal } from '@/hooks/useReveal';
@@ -88,38 +88,38 @@ export default function Products() {
                 <ProductImage
                 name={p.name}
                 image={p.image}
-                className="w-full h-full object-contain p-5 transition-all duration-500 group-hover:scale-110"
+                className="w-full h-full object-contain p-3 transition-all duration-500 group-hover:scale-110"
                />
-               <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+               <div className="absolute top-3 left-3 flex flex-col gap-2">
 
   {p.stock === "in-stock" ? (
-    <span className="badge bg-green-600 text-white flex items-center gap-1">
+    <span className="inline-flex w-fit items-center gap-1 rounded-full bg-emerald-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
       <CheckCircle2 className="w-3 h-3" />
       In Stock
     </span>
   ) : (
-    <span className="badge bg-red-600 text-white flex items-center gap-1">
+    <span className="inline-flex w-fit items-center gap-1 rounded-full bg-red-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
       <XCircle className="w-3 h-3" />
       Out of Stock
     </span>
   )}
 
-  {p.badge === 'new' && (
-    <span className="badge bg-green-500/90 text-white">
+  {p.badge === "new" && (
+    <span className="inline-flex w-fit rounded-full bg-green-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
       NEW
     </span>
   )}
 
-  {p.badge === 'Used' && (
-    <span className="badge bg-orange-500/90 text-white">
+  {p.badge === "Used" && (
+    <span className="inline-flex w-fit rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
       Used
     </span>
   )}
 
-  <span className="badge bg-primary-500/90 text-white flex items-center gap-1">
+  {/* <span className="badge bg-primary-500/90 text-white flex items-center gap-1">
     <ShieldCheck className="w-3 h-3" />
     {p.warranty}
-  </span>
+  </span> */}
 
 </div>
                 <button
