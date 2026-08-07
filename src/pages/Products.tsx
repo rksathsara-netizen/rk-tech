@@ -103,7 +103,11 @@ return matchCat && matchAccessory && matchSearch;
           {productCategories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setCategory(cat)}
+              onClick={() => {
+  window.history.pushState({ category: cat }, '', window.location.href);
+  setCategory(cat);
+  setAccessoryType(null);
+}}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                 category === cat
                   ? 'bg-gradient-to-r from-primary-500 to-neon-blue text-ink-950 shadow-glow'
