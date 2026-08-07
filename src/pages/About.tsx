@@ -25,7 +25,7 @@ export default function About() {
               Sri Lanka's Trusted <span className="gradient-text">Tech Repair</span> Partner
             </h1>
             <p className="mt-6 text-lg text-slate-400 leading-relaxed">
-              Founded in 2016 in the heart of Piliyandala, RK Tech Solutions started as a small repair bench with a big mission: to provide honest, expert, and affordable tech services to our community. Today, we've grown into a full-service computer shop and repair center trusted by thousands across Sri Lanka.
+              With over 6 years of hands-on experience, RK Tech Solutions provides reliable computer repairs, laptop servicing, hardware upgrades, and IT solutions across Sri Lanka. We are committed to delivering quality workmanship, honest service, and dependable technical support you can trust.
             </p>
           </div>
         </div>
