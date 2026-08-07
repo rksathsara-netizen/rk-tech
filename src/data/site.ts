@@ -4,6 +4,7 @@ export type Product = {
   category: string;
   subcategory?: string;
   price: number;
+  stock?: 'in-stock' | 'out-of-stock';
   oldPrice?: number;
   image: string;
   rating: number;
@@ -191,7 +192,7 @@ export const products: Product[] = [
   // { id: 'p11', name: 'Samsung 27" 4K Monitor', category: 'Monitors', price: 95000, oldPrice: 110000, image: 'monitor-4k', rating: 5, badge: 'Used', warranty: '3-Year Warranty', description: '27" UHD IPS, HDR400, 60Hz, USB-C 90W charging', specs: ['27" UHD IPS', '3840x2160', 'HDR400', 'USB-C 90W', 'Height Adjustable'] },
   // { id: 'p12', name: 'Acer Aspire 3', category: 'Laptops', price: 125000, image: 'budget-laptop', rating: 4, badge: 'warranty', warranty: '1-Year Warranty', description: 'Intel i5, 8GB, 512GB SSD, 15.6" FHD — great for everyday use', specs: ['Intel Core i5-1235U', '8GB DDR4', '512GB SSD', '15.6" FHD', 'Intel Iris Xe'] },
   { id: 'p13', name: 'DDR4 8GB', stock: "in-stock", category: 'Accessories', subcategory: 'RAM', price: 13500, image: 'mouse', rating: 5, badge: 'warranty', warranty: '2-Year Warranty', description: 'Ultra-light wireless gaming mouse, 30K DPI optical sensor', specs: ['63g Ultralight', '30,000 DPI Sensor', '90hr Battery', 'Optical Gen-3 Switches', 'HyperSpeed Wireless'] },
-  { id: 'p14', name: 'HDD 1TB', stock: "in-stock", category: 'Accessories', subcategory: 'HDD', price: 15000, oldPrice: 10000, image: '/products/1tb.jpeg', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
+  { id: 'p14', name: 'HDD 1TB', stock: "in-stock", category: 'Accessories', subcategory: 'HDD', price: 80000, oldPrice: 10000, image: '/products/1tb.jpeg', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
 ];
 
 export const reviews: Review[] = [
