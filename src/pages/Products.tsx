@@ -182,15 +182,6 @@ return matchCat && matchAccessory && matchSearch;
   </div>
 )}
 
-{category === 'Accessories' && accessoryType && (
-  <button
-    onClick={() => setAccessoryType(null)}
-    className="mt-6 mb-2 text-sm text-slate-400 hover:text-white transition-colors"
-  >
-    ← Back to Accessories
-  </button>
-)}
-
         {/* Products grid */}
         {(category !== 'Accessories' || accessoryType) && (
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
