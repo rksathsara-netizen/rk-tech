@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Search, SlidersHorizontal, X, Star, ChevronRight, CheckCircle2, XCircle } from "lucide-react";
+import { Search, SlidersHorizontal, X, Star, ChevronRight, CheckCircle2, XCircle,ShieldCheck } from "lucide-react";
 import { SectionHeading } from '@/components/SectionHeading';
 import { ProductImage } from '@/components/ProductImage';
 import { useReveal } from '@/hooks/useReveal';
