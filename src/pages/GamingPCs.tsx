@@ -8,7 +8,7 @@ import { products, business } from '@/data/site';
 const tiers = [
   {
     name: 'Starter',
-    price: 'Rs. 150,000',
+    price: 'CUSTOM BUILD',
     target: '1080p Gaming',
     cpu: 'Ryzen 5 7600',
     gpu: 'RTX 4060 8GB',
@@ -19,7 +19,7 @@ const tiers = [
   },
   {
     name: 'Performance',
-    price: 'Rs. 295,000',
+    price: 'CUSTOM BUILD',
     target: '1440p Gaming',
     cpu: 'Ryzen 7 7800X3D',
     gpu: 'RTX 4070 Super 12GB',
@@ -31,7 +31,7 @@ const tiers = [
   },
   {
     name: '4K Beast',
-    price: 'Rs. 850,000',
+    price: 'CUSTOM BUILD',
     target: '4K Ultra Gaming',
     cpu: 'Ryzen 9 7950X3D',
     gpu: 'RTX 4090 24GB',
@@ -117,7 +117,7 @@ export default function GamingPCs() {
                     ))}
                   </ul>
                   <Link to="/contact" className={`w-full ${t.popular ? 'btn-primary' : 'btn-ghost'} flex justify-center`}>
-                    Build This PC
+                    Request a Quote
                   </Link>
                 </div>
               </div>
