@@ -189,7 +189,7 @@ export const products: Product[] = [
   { id: 'p10', name: 'Corsair RM850e PSU', category: 'Components', price: 28000, image: 'psu', rating: 5, badge: 'warranty', warranty: '7-Year Warranty', description: '850W 80+ Gold, fully modular, ATX 3.0, PCIe 5.0', specs: ['850W', '80 PLUS Gold', 'Fully Modular', 'ATX 3.0', 'PCIe 5.0 12VHPWR'] },
   { id: 'p11', name: 'Samsung 27" 4K Monitor', category: 'Monitors', price: 95000, oldPrice: 110000, image: 'monitor-4k', rating: 5, badge: 'sale', warranty: '3-Year Warranty', description: '27" UHD IPS, HDR400, 60Hz, USB-C 90W charging', specs: ['27" UHD IPS', '3840x2160', 'HDR400', 'USB-C 90W', 'Height Adjustable'] },
   { id: 'p12', name: 'Acer Aspire 3', category: 'Laptops', price: 125000, image: 'budget-laptop', rating: 4, badge: 'warranty', warranty: '1-Year Warranty', description: 'Intel i5, 8GB, 512GB SSD, 15.6" FHD — great for everyday use', specs: ['Intel Core i5-1235U', '8GB DDR4', '512GB SSD', '15.6" FHD', 'Intel Iris Xe'] },
-  { id: 'p13', name: 'DDR4 8GB', category: 'Accessories', price: 13500, image: 'mouse', rating: 5, badge: 'warranty', warranty: '2-Year Warranty', description: 'Ultra-light wireless gaming mouse, 30K DPI optical sensor', specs: ['63g Ultralight', '30,000 DPI Sensor', '90hr Battery', 'Optical Gen-3 Switches', 'HyperSpeed Wireless'] },
+  { id: 'p13', name: 'DDR4 8GB', category: 'Accessories', price: 13500, image: 'mouse', rating: 5, badge: 'sale', badge: 'warranty', warranty: '2-Year Warranty', description: 'Ultra-light wireless gaming mouse, 30K DPI optical sensor', specs: ['63g Ultralight', '30,000 DPI Sensor', '90hr Battery', 'Optical Gen-3 Switches', 'HyperSpeed Wireless'] },
 ];
 
 export const reviews: Review[] = [
