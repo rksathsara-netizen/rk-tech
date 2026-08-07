@@ -68,15 +68,14 @@ export function FloatingActions() {
 
       {/* WhatsApp */}
       <a
-        href={business.social.whatsapp}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="WhatsApp"
-        className="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_30px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform relative"
-      >
-       <MessageCircle  className="w-7 h-7 text-white" />
-        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
-      </a>
+  href={business.social.whatsapp}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] shadow-[0_0_30px_rgba(37,211,102,0.5)] hover:scale-110 transition-all duration-300"
+>
+  <FaWhatsapp className="w-7 h-7 text-white relative z-10" />
+  <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
+</a>
     </div>
   );
 }
