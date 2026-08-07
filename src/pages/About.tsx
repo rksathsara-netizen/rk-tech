@@ -7,8 +7,8 @@ import { business } from '@/data/site';
 
 export default function About() {
   useReveal();
-  const r1 = useCounter(8);
-  const r2 = useCounter(5000);
+  const r1 = useCounter(6);
+  const r2 = useCounter(95);
   const r3 = useCounter(15);
   const r4 = useCounter(98);
 
@@ -37,7 +37,7 @@ export default function About() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { ref: r1, suffix: '+', label: 'Years in Business' },
-              { ref: r2, suffix: '+', label: 'Devices Repaired' },
+              { ref: r2, suffix: '%', label: 'Devices Repaired' },
               { ref: r3, suffix: '+', label: 'Brands Serviced' },
               { ref: r4, suffix: '%', label: 'Customer Satisfaction' },
             ].map((s) => (
