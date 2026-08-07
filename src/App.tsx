@@ -30,7 +30,7 @@ function Shell() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <Aurora />
       <Loader />
       <Navbar />
