@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Search, SlidersHorizontal, X, ShieldCheck, Star, ChevronRight } from 'lucide-react';
+import { Search, SlidersHorizontal, X, ShieldCheck, Star, ChevronRight, CheckCircle2, XCircle } from 'lucide-react';
 import { SectionHeading } from '@/components/SectionHeading';
 import { ProductImage } from '@/components/ProductImage';
 import { useReveal } from '@/hooks/useReveal';
@@ -90,11 +90,38 @@ export default function Products() {
                 image={p.image}
                 className="w-full h-full object-contain p-5 transition-all duration-500 group-hover:scale-110"
                />
-                <div className="absolute top-3 left-3 flex flex-col gap-1.5">
-                  {p.badge === 'new' && <span className="badge bg-green-500/90 text-white">NEW</span>}
-                  {p.badge === 'Used' && <span className="badge bg-red-500/90 text-white">Used</span>}
-                  <span className="badge bg-primary-500/90 text-white"><ShieldCheck className="w-3 h-3" /> {p.warranty}</span>
-                </div>
+               <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+
+  {p.stock === "in-stock" ? (
+    <span className="badge bg-green-600 text-white flex items-center gap-1">
+      <CheckCircle2 className="w-3 h-3" />
+      In Stock
+    </span>
+  ) : (
+    <span className="badge bg-red-600 text-white flex items-center gap-1">
+      <XCircle className="w-3 h-3" />
+      Out of Stock
+    </span>
+  )}
+
+  {p.badge === 'new' && (
+    <span className="badge bg-green-500/90 text-white">
+      NEW
+    </span>
+  )}
+
+  {p.badge === 'Used' && (
+    <span className="badge bg-orange-500/90 text-white">
+      Used
+    </span>
+  )}
+
+  <span className="badge bg-primary-500/90 text-white flex items-center gap-1">
+    <ShieldCheck className="w-3 h-3" />
+    {p.warranty}
+  </span>
+
+</div>
                 <button
                   onClick={() => setQuickView(p)}
                   className="absolute inset-0 bg-ink-950/60 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
