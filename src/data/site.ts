@@ -144,15 +144,15 @@ export const services: Service[] = [
     duration: 'Same day',
   },
   {
-    id: 'virus-removal',
-    name: 'Virus Removal',
-    slug: 'virus-removal',
-    icon: 'ShieldCheck',
-    tagline: 'Deep malware, virus, and spyware elimination',
-    description: 'Is your computer acting strange? Pop-ups, slow performance, suspicious programs? We perform deep-scan virus removal, clean every trace of malware, and install robust protection to prevent reinfection.',
-    features: ['Deep malware scan', 'Ransomware removal', 'Browser hijack fix', 'Adware removal', 'Rootkit elimination', 'System hardening', 'Antivirus setup', 'Security consultation'],
+    id: 'tv-repair',
+    name: 'TV-Repair',
+    slug: 'tv-repair',
+    icon: 'Tv',
+    tagline: 'Professional TV repair and troubleshooting',
+    description: 'Is your TV not turning on, showing a blank screen, having sound problems, or displaying unusual lines and colors? We provide professional TV repair and troubleshooting services for common hardware and display issues. Our technicians diagnose the problem carefully and provide a reliable repair solution to get your TV working properly again.',
+    features: ['TV power issue repair', 'Blank screen troubleshooting', 'Display and picture problem repair', 'Sound problem troubleshooting', 'HDMI and input issue repair', 'Backlight problem repair', 'TV motherboard troubleshooting', 'Professional TV diagnostics'],
     startingPrice: 'Contact for Pricing',
-    duration: 'Same day – 1 day',
+    duration: 'Same day – 2 days',
   },
   {
     id: 'windows-install',
@@ -179,20 +179,20 @@ export const services: Service[] = [
 ];
 
 export const products: Product[] = [
-  // { id: 'p1', name: 'ASUS ROG Strix G16', category: 'Gaming Laptops', price: 425000, oldPrice: 450000, image: 'gaming-laptop', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
+  { id: 'p1', name: 'Kim MID 128GB mSATA SSD', stock: "in-stock", category: 'Components & Accessories', subcategory: 'Components', price: 9500, oldPrice: 15000, image: '/products/msata.jpeg', rating: 5, badge: 'Used', warranty: '3-Month Warranty', description: 'Kim MID 128GB mSATA SSD, 3.3V 1A interface, suitable for compatible laptops and compact systems.', specs: ['128GB Capacity', 'mSATA Interface', '3.3V / 1A', 'Kim MID Brand', 'Model: T900-128GB'] },
   // { id: 'p2', name: 'Dell XPS 15 OLED', category: 'Laptops', price: 385000, image: 'ultrabook', rating: 5, badge: 'new', warranty: '1-Year Warranty', description: 'Intel i7, 16GB, 512GB SSD, 15.6" 3.5K OLED touch display', specs: ['Intel Core i7-13700H', '16GB DDR5', '512GB SSD', '15.6" 3.5K OLED Touch', 'Intel Iris Xe'] },
   // { id: 'p3', name: 'Custom RTX 4070 Gaming PC', category: 'Gaming PCs', price: 295000, oldPrice: 320000, image: 'gaming-pc', rating: 5, badge: 'Used', warranty: '3-Year Warranty', description: 'Ryzen 7 7800X3D, RTX 4070 Super, 32GB DDR5, 2TB NVMe', specs: ['Ryzen 7 7800X3D', 'RTX 4070 Super 12GB', '32GB DDR5 6000MHz', '2TB NVMe SSD', '850W Gold PSU'] },
   // { id: 'p4', name: 'Samsung 990 Pro 2TB SSD', category: 'Components', price: 45000, image: 'ssd', rating: 5, badge: 'warranty', warranty: '5-Year Warranty', description: 'PCIe 4.0 NVMe, up to 7450 MB/s read, 6900 MB/s write', specs: ['2TB Capacity', 'PCIe 4.0 x4', '7450 MB/s Read', '6900 MB/s Write', 'M.2 2280'] },
   // { id: 'p5', name: 'Logitech G Pro X Keyboard', category: 'Accessories', price: 28500, image: 'keyboard', rating: 4, badge: 'new', warranty: '2-Year Warranty', description: 'Wireless mechanical gaming keyboard with GX Blue switches', specs: ['Wireless / Wired', 'GX Blue Switches', 'RGB LIGHTSYNC', 'Aircraft-grade aluminum', '30M keystroke life'] },
-  { id: 'p6', name: 'HP 24" FHD Monitor', category: 'Monitors', price: 32000, oldPrice: 38000, image: 'monitor', rating: 4, badge: 'new', warranty: '3-Year Warranty', description: '24" IPS panel, 1080p, 75Hz, built-in speakers, VESA mount', specs: ['24" IPS Display', '1920x1080', '75Hz Refresh', 'Built-in Speakers', 'VESA 100x100'] },
+  { id: 'p6', name: 'HP 24" FHD Monitor', category: 'Monitors', price: 40000, oldPrice: 38000, image: 'monitor', rating: 4, badge: 'new', warranty: '3-Year Warranty', description: '24" IPS panel, 1080p, 75Hz, built-in speakers, VESA mount', specs: ['24" IPS Display', '1920x1080', '75Hz Refresh', 'Built-in Speakers', 'VESA 100x100'] },
   // { id: 'p7', name: 'Razer DeathAdder V3 Pro', category: 'Accessories', price: 19500, image: 'mouse', rating: 5, badge: 'warranty', warranty: '2-Year Warranty', description: 'Ultra-light wireless gaming mouse, 30K DPI optical sensor', specs: ['63g Ultralight', '30,000 DPI Sensor', '90hr Battery', 'Optical Gen-3 Switches', 'HyperSpeed Wireless'] },
   // { id: 'p8', name: 'Custom RTX 4090 4K Beast', category: 'Gaming PCs', price: 850000, image: 'gaming-pc-beast', rating: 5, badge: 'warranty', warranty: '3-Year Warranty', description: 'Ryzen 9 7950X3D, RTX 4090, 64GB DDR5, 4TB NVMe, liquid cooled', specs: ['Ryzen 9 7950X3D', 'RTX 4090 24GB', '64GB DDR5 6000MHz', '4TB NVMe SSD', '1000W Platinum + Liquid Cooling'] },
   // { id: 'p9', name: 'Lenovo Legion 5 Pro', category: 'Gaming Laptops', price: 365000, image: 'gaming-laptop-2', rating: 5, badge: 'new', warranty: '2-Year Warranty', description: 'Ryzen 7, RTX 4060, 16GB DDR5, 1TB SSD, 16" QHD 165Hz', specs: ['Ryzen 7 7745HX', 'RTX 4060 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 165Hz'] },
   // { id: 'p10', name: 'Corsair RM850e PSU', category: 'Components', price: 28000, image: 'psu', rating: 5, badge: 'warranty', warranty: '7-Year Warranty', description: '850W 80+ Gold, fully modular, ATX 3.0, PCIe 5.0', specs: ['850W', '80 PLUS Gold', 'Fully Modular', 'ATX 3.0', 'PCIe 5.0 12VHPWR'] },
   // { id: 'p11', name: 'Samsung 27" 4K Monitor', category: 'Monitors', price: 95000, oldPrice: 110000, image: 'monitor-4k', rating: 5, badge: 'Used', warranty: '3-Year Warranty', description: '27" UHD IPS, HDR400, 60Hz, USB-C 90W charging', specs: ['27" UHD IPS', '3840x2160', 'HDR400', 'USB-C 90W', 'Height Adjustable'] },
   // { id: 'p12', name: 'Acer Aspire 3', category: 'Laptops', price: 125000, image: 'budget-laptop', rating: 4, badge: 'warranty', warranty: '1-Year Warranty', description: 'Intel i5, 8GB, 512GB SSD, 15.6" FHD — great for everyday use', specs: ['Intel Core i5-1235U', '8GB DDR4', '512GB SSD', '15.6" FHD', 'Intel Iris Xe'] },
-  { id: 'p13', name: 'DDR4 8GB', stock: "in-stock", category: 'Accessories', subcategory: 'RAM', price: 13500, image: 'mouse', rating: 5, badge: 'warranty', warranty: '2-Year Warranty', description: 'Ultra-light wireless gaming mouse, 30K DPI optical sensor', specs: ['63g Ultralight', '30,000 DPI Sensor', '90hr Battery', 'Optical Gen-3 Switches', 'HyperSpeed Wireless'] },
-  { id: 'p14', name: 'HDD 1TB', stock: "in-stock", category: 'Accessories', subcategory: 'HDD', price: 80000, oldPrice: 10000, image: '/products/1tb.jpeg', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
+  { id: 'p13', name: 'DDR4 8GB', stock: "in-stock", category: 'Components & Accessories', subcategory: 'Components', price: 13500, image: 'mouse', rating: 5, badge: 'warranty', warranty: '2-Year Warranty', description: 'Ultra-light wireless gaming mouse, 30K DPI optical sensor', specs: ['63g Ultralight', '30,000 DPI Sensor', '90hr Battery', 'Optical Gen-3 Switches', 'HyperSpeed Wireless'] },
+  { id: 'p14', name: 'HDD 1TB', stock: "in-stock", category: 'Components & Accessories', subcategory: 'Components', price: 80000, oldPrice: 10000, image: '/products/1tb.jpeg', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
 ];
 
 export const reviews: Review[] = [
@@ -208,10 +208,12 @@ export const brands = [
   'ASUS', 'Dell', 'HP', 'Lenovo', 'Acer', 'Apple', 'Samsung', 'MSI', 'Logitech', 'Razer', 'Corsair', 'Intel', 'AMD', 'NVIDIA',
 ];
 
-export const productCategories = ['All', 'Gaming Laptops', 'Laptops', 'Gaming PCs', 'Components', 'Monitors', 'Accessories'];
+export const productCategories = ['All', 'Mobile & Accessories', 'Electronics & Accessories', 'Components & Accessories', 'Desktop & Monitors', 'Laptops', 'CCTV', 'TV'];
 
 export const faqs = [
-  { q: 'Do you offer same-day repairs?', a: 'Yes! Most common repairs like screen replacements, battery swaps, software issues, and virus removal are completed same-day. Complex repairs like motherboard-level work may take 2–7 days depending on parts availability.' },
+  
+  
+  { q: 'Do you offer same-day TV repairs?', a: 'Yes! Many common TV issues can be diagnosed and repaired the same day. Simple problems such as power issues, sound problems, HDMI/input issues, and some display or backlight problems may be completed within the same day. More complex repairs, such as motherboard or panel-related issues, may take longer depending on the problem and availability of replacement parts.' },
   { q: 'Do you provide a warranty on repairs?', a: 'Absolutely. Every repair comes with a minimum 30-day service warranty. Parts replacements carry the manufacturer warranty (typically 1–5 years). We stand behind every repair we do.' },
   { q: 'Do you offer home/office visits?', a: 'Yes, we provide on-site service for networking, CCTV installation, and certain desktop/printer issues within Colombo and nearby areas. Call us to schedule a visit.' },
   { q: 'How much does a diagnostic cost?', a: 'Diagnostics are completely free. We\'ll assess your device, identify the problem, and give you a transparent quote before any work begins. No hidden charges.' },
