@@ -146,7 +146,7 @@ export default function Products() {
       Choose a category
     </p>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
       {/* Components */}
       <button
@@ -160,19 +160,31 @@ export default function Products() {
         }}
         className="group glass-card overflow-hidden text-left hover:border-cyan-400/50 transition-all"
       >
-        <div className="h-52 bg-slate-900/50 flex items-center justify-center overflow-hidden">
-          <img
-            src="/products/components.jpeg"
-            alt="Components"
-            className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500"
-          />
-        </div>
+        <div className="h-64 bg-gradient-to-br from-slate-900/80 via-slate-900/40 to-cyan-950/30 flex items-center justify-center overflow-hidden">
+  <img
+    src="/products/components.jpeg"
+    alt="Components"
+    className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_25px_rgba(34,211,238,0.25)]"
+  />
+</div>
 
         <div className="p-6">
-          <h3 className="font-display text-2xl font-bold">
-            Components
-          </h3>
-        </div>
+  <div className="flex items-center justify-between gap-4">
+    <div>
+      <h3 className="font-display text-2xl font-bold">
+        Components
+      </h3>
+
+      <p className="text-sm text-slate-400 mt-2">
+        RAM, HDD, SSD and other essential PC components.
+      </p>
+    </div>
+
+    <span className="shrink-0 px-4 py-2 rounded-full bg-cyan-400/10 text-cyan-400 text-sm font-semibold group-hover:bg-cyan-400 group-hover:text-slate-950 transition-all">
+      Explore →
+    </span>
+  </div>
+</div>
       </button>
 
       {/* Accessories */}
@@ -219,7 +231,7 @@ export default function Products() {
               Choose a category
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
               <button
                 onClick={() => {
