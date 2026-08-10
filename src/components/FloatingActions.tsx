@@ -9,10 +9,25 @@ export function FloatingActions() {
   const [toolsOpen, setToolsOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setShowTop(window.scrollY > 600);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  let ticking = false;
+
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        setShowTop(window.scrollY > 600);
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  return () => {
+    window.removeEventListener('scroll', onScroll);
+  };
+}, []);
 
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
@@ -76,7 +91,7 @@ export function FloatingActions() {
         className="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_30px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform relative"
       >
        <MessageCircle  className="w-7 h-7 text-white" />
-        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
+        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-20 hidden md:block md:animate-ping" />
       </a>
     </div>
   );
