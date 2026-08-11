@@ -102,17 +102,24 @@ function Hero({ typed }: { typed: string }) {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay">
-      {/* Video background fallback: animated gradient + particles */}
-      <div ref={heroRef} className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-950 via-ink-900 to-ink-950" />
-        <div className="absolute top-0 left-1/4 w-[50vw] h-[50vw] rounded-full bg-primary-600/25 blur-[140px] animate-aurora" />
-        <div className="absolute bottom-0 right-1/4 w-[40vw] h-[40vw] rounded-full bg-neon-blue/20 blur-[120px] animate-aurora-2" />
-        <div className="absolute inset-0 grid-pattern opacity-20" />
-        <ParticleField density={70} />
-      </div>
+  {/* Video background fallback: animated gradient + particles */}
+  <div ref={heroRef} className="absolute inset-0 -z-10">
+    <div className="absolute inset-0 bg-gradient-to-b from-ink-950 via-ink-900 to-ink-950" />
 
-      {/* Floating tech icons */}
-      {floatIcons.map((Icon, i) => (
+    {/* Desktop background animations only */}
+    <div className="hidden md:block absolute top-0 left-1/4 w-[50vw] h-[50vw] rounded-full bg-primary-600/25 blur-[140px] animate-aurora" />
+
+    <div className="hidden md:block absolute bottom-0 right-1/4 w-[40vw] h-[40vw] rounded-full bg-neon-blue/20 blur-[120px] animate-aurora-2" />
+
+    <div className="hidden md:block absolute inset-0 grid-pattern opacity-20" />
+
+    <div className="hidden md:block">
+      <ParticleField density={70} />
+    </div>
+  </div>
+
+  {/* Floating tech icons */}
+  {floatIcons.map((Icon, i) => (
         <div
           key={i}
           className="absolute hidden md:block text-neon-blue/20 animate-float"
