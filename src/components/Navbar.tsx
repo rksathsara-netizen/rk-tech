@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Moon, Sun, Phone, ChevronDown } from 'lucide-react';
-import { useTheme } from '@/hooks/useTheme';
+import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { business, services } from '@/data/site';
 import { Magnetic } from './Magnetic';
 
@@ -9,7 +8,6 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const { theme, toggle } = useTheme();
   const location = useLocation();
 
   useEffect(() => {
@@ -117,13 +115,6 @@ export function Navbar() {
 
             {/* Right actions */}
             <div className="flex items-center gap-2 sm:gap-3">
-              <button
-                onClick={toggle}
-                aria-label="Toggle theme"
-                className="w-10 h-10 rounded-full glass flex items-center justify-center hover:border-neon-blue/50 transition-colors"
-              >
-                {theme === 'dark' ? <Sun className="w-4.5 h-4.5 text-neon-blue" /> : <Moon className="w-4.5 h-4.5 text-primary-600" />}
-              </button>
 
               <Magnetic strength={0.2}>
                 <a
