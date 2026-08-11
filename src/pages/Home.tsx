@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  ArrowRight, Star, Zap, ShieldCheck, Home as HomeIcon, Award, Wallet, Clock,
+  ArrowRight, Star, Zap, ShieldCheck, Home as HomeIcon, Clock,
   Cpu, Monitor, Laptop, Gamepad2, Network, Cctv, HardDriveDownload, Wrench, Download,
   Sparkles, Search, ChevronRight, Quote, MapPin, Phone, Mail,
 } from 'lucide-react';
@@ -80,15 +80,25 @@ function Hero({ typed }: { typed: string }) {
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const onScroll = () => {
-      if (!heroRef.current) return;
-      const y = window.scrollY;
-      heroRef.current.style.transform = `translateY(${y * 0.3}px)`;
-      heroRef.current.style.opacity = `${Math.max(1 - y / 700, 0)}`;
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+  if (isMobile) return;
+
+  const onScroll = () => {
+    if (!heroRef.current) return;
+
+    const y = window.scrollY;
+
+    heroRef.current.style.transform = `translateY(${y * 0.3}px)`;
+    heroRef.current.style.opacity = `${Math.max(1 - y / 700, 0)}`;
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  return () => {
+    window.removeEventListener('scroll', onScroll);
+  };
+}, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay">
@@ -128,8 +138,16 @@ function Hero({ typed }: { typed: string }) {
         </div>
 
         <h1 className="reveal reveal-delay-1 font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95]">
-  We <span className="gradient-text">{typed || 'Repair.'}</span>
-  <span className="typing-cursor" />
+  We{" "}
+  <span className="hidden sm:inline gradient-text">
+    {typed || 'Repair.'}
+    <span className="typing-cursor" />
+  </span>
+
+  <span className="inline sm:hidden gradient-text">
+    Repair.
+  </span>
+
   <br />
 
   <span className="bg-gradient-to-r from-cyan-400 via-blue-600 to-purple-600 bg-clip-text text-transparent">
