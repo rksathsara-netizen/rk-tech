@@ -5,7 +5,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
 
   return (
-    <div key={pathname} className="page-transition">
+    <div key={pathname} className="route-transition">
       {children}
     </div>
   );
