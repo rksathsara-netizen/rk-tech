@@ -11,6 +11,7 @@ export default function Products() {
   const [sort, setSort] = useState('featured');
   const [accessoryType, setAccessoryType] = useState<string | null>(null);
   const [quickView, setQuickView] = useState<Product | null>(null);
+  const [visibleCount, setVisibleCount] = useState(4);
 
   useEffect(() => {
     const handleBack = () => {
@@ -75,6 +76,10 @@ export default function Products() {
   }
 
   return result;
+}, [category, accessoryType, search, sort]);
+
+useEffect(() => {
+  setVisibleCount(5);
 }, [category, accessoryType, search, sort]);
 
   return (
@@ -310,7 +315,7 @@ export default function Products() {
   accessoryType
 ) && (
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filtered.map((p) => (
+            {filtered.slice(0, visibleCount).map((p) => (
               <div
                 key={p.id}
                 className="group glass-card overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(34,211,238,0.25)]"
@@ -390,11 +395,26 @@ export default function Products() {
           </div>
         )}
 
-        {filtered.length === 0 && (
-          <div className="text-center py-20 text-slate-500">
-            No products found. Try a different search or category.
-          </div>
-        )}
+{filtered.length > 4 && (
+  <div className="flex justify-center mt-10">
+    {visibleCount < filtered.length ? (
+      <button
+        onClick={() => setVisibleCount(filtered.length)}
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary-500 to-neon-blue text-ink-950 font-semibold shadow-glow hover:scale-105 transition-all"
+      >
+        More Products
+        <ChevronRight className="w-4 h-4" />
+      </button>
+    ) : (
+      <button
+        onClick={() => setVisibleCount(4)}
+        className="px-6 py-3 rounded-full glass text-slate-200 font-semibold hover:border-neon-blue/50 transition-all"
+      >
+        View Less
+      </button>
+    )}
+  </div>
+)}
       </div>
 
       {/* Quick view modal */}
