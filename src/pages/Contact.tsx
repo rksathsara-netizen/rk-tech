@@ -10,13 +10,50 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setForm({ name: '', email: '', phone: '', service: '', message: '' });
-    }, 4000);
-  };
+  e.preventDefault();
+
+  const whatsappMessage = `
+Hello RK Tech Solutions 👋
+
+New Contact Form Inquiry
+
+👤 Name: ${form.name}
+📞 Phone: ${form.phone}
+📧 Email: ${form.email}
+🛠️ Service: ${form.service || 'Not specified'}
+
+💬 Message:
+${form.message}
+
+Thank you.
+  `.trim();
+
+  // Get WhatsApp number from your business data
+  const whatsappUrl = business.social.whatsapp;
+
+  // Add the form message to the WhatsApp URL
+  const separator = whatsappUrl.includes('?') ? '&' : '?';
+
+  const finalUrl =
+    `${whatsappUrl}${separator}text=${encodeURIComponent(whatsappMessage)}`;
+
+  // Open WhatsApp
+  window.open(finalUrl, '_blank', 'noopener,noreferrer');
+
+  // Show success screen
+  setSubmitted(true);
+
+  setTimeout(() => {
+    setSubmitted(false);
+    setForm({
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: '',
+    });
+  }, 4000);
+};
 
   return (
     <div className="pt-32 pb-20">
