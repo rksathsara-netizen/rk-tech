@@ -192,15 +192,18 @@ export const products: Product[] = [
       //  { id: 'p3', name: 'Custom RTX 4070 Gaming PC', category: 'Gaming PCs', price: 295000, oldPrice: 320000, image: 'gaming-pc', rating: 5, badge: 'Used', warranty: '3-Year Warranty', description: 'Ryzen 7 7800X3D, RTX 4070 Super, 32GB DDR5, 2TB NVMe', specs: ['Ryzen 7 7800X3D', 'RTX 4070 Super 12GB', '32GB DDR5 6000MHz', '2TB NVMe SSD', '850W Gold PSU'] },
       //  { id: 'p8', name: 'Custom RTX 4090 4K Beast', category: 'Gaming PCs', price: 850000, image: 'gaming-pc-beast', rating: 5, badge: 'warranty', warranty: '3-Year Warranty', description: 'Ryzen 9 7950X3D, RTX 4090, 64GB DDR5, 4TB NVMe, liquid cooled', specs: ['Ryzen 9 7950X3D', 'RTX 4090 24GB', '64GB DDR5 6000MHz', '4TB NVMe SSD', '1000W Platinum + Liquid Cooling'] },
 
- // ##### *Mobile & Accessories* #####
+      { id: 'p13', name: 'DDR4 8GB Desktop RAM', stock: "in-stock", category: 'Laptops', price: 0, image: '/products/ddr4 8gb desktop.jpeg', rating: 5, badge: 'Used', warranty: '3-Month Warranty', description: 'Reliable 8GB DDR4 desktop RAM, suitable for compatible desktop computers and PC upgrades.', specs: ['8GB DDR4 RAM', 'Desktop DIMM', '2Rx8 Memory', 'Compatible with DDR4 Motherboards', 'PC4-2133P'] },
+      { id: 'p14', name: 'HDD 1TB', category: 'Components & Accessories', subcategory: 'Components', price: 1500, oldPrice: 100, image: '/products/1tb.jpeg', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
+ 
+      // ##### *Mobile & Accessories* #####
   
  // ##### *Electronics & Accessories* ###
  
  // ##### *Coponents & Accessories* #####
     // #Coponents#
-       { id: 'p1', name: 'Kim MID 128GB mSATA SSD', stock: "in-stock", category: 'Components & Accessories', subcategory: 'Components', price: 0, oldPrice: 10, image: '/products/msata.jpeg', rating: 5, badge: 'Used', warranty: '3-Month Warranty', description: 'Kim MID 128GB mSATA SSD, 3.3V 1A interface, suitable for compatible laptops and compact systems.', specs: ['128GB Capacity', 'mSATA Interface', '3.3V / 1A', 'Kim MID Brand', 'Model: T900-128GB'] },
-       { id: 'p13', name: 'DDR4 8GB Desktop RAM', stock: "in-stock", category: 'Components & Accessories', subcategory: 'Components', price: 0, image: '/products/ddr4 8gb desktop.jpeg', rating: 5, badge: 'Used', warranty: '3-Month Warranty', description: 'Reliable 8GB DDR4 desktop RAM, suitable for compatible desktop computers and PC upgrades.', specs: ['8GB DDR4 RAM', 'Desktop DIMM', '2Rx8 Memory', 'Compatible with DDR4 Motherboards', 'PC4-2133P'] },
-       { id: 'p14', name: 'HDD 1TB', stock: "in-stock", category: 'Components & Accessories', subcategory: 'Components', price: 0, oldPrice: 10, image: '/products/1tb.jpeg', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
+       { id: 'p1', name: 'Kim MID 128GB mSATA SSD', category: 'Components & Accessories', subcategory: 'Components', price: 0, oldPrice: 10, image: '/products/msata.jpeg', rating: 5, badge: 'Used', warranty: '3-Month Warranty', description: 'Kim MID 128GB mSATA SSD, 3.3V 1A interface, suitable for compatible laptops and compact systems.', specs: ['128GB Capacity', 'mSATA Interface', '3.3V / 1A', 'Kim MID Brand', 'Model: T900-128GB'] },
+       { id: 'p13', name: 'DDR4 8GB Desktop RAM', category: 'Components & Accessories', subcategory: 'Components', price: 0, image: '/products/ddr4 8gb desktop.jpeg', rating: 5, badge: 'Used', warranty: '3-Month Warranty', description: 'Reliable 8GB DDR4 desktop RAM, suitable for compatible desktop computers and PC upgrades.', specs: ['8GB DDR4 RAM', 'Desktop DIMM', '2Rx8 Memory', 'Compatible with DDR4 Motherboards', 'PC4-2133P'] },
+       { id: 'p14', name: 'HDD 1TB',  category: 'Components & Accessories', subcategory: 'Components', price: 0, oldPrice: 10, image: '/products/1tb.jpeg', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
  
     // #Accessories#
 
@@ -210,7 +213,7 @@ export const products: Product[] = [
  // ##### *Laptop* #####
  
  // ##### *CCTV* #####
-       { id: 'p15', name: '4G 3-Lens CCTV Camera', stock: "in-stock", category: 'CCTV', price: 0, image: '/products/4g 3lens camera.jpeg', rating: 5, badge: 'new', warranty: '6-Month Warranty', description: '4G 3-Lens Outdoor CCTV Camera with PTZ rotation, night vision, motion detection and remote mobile monitoring.', specs: ['4G SIM Supported', '3-Lens Camera System', 'Remote Mobile Monitoring', 'Full-Color Night Vision', 'Motion Detection', 'Two-Way Audio'] },
+       { id: 'p15', name: '4G 3-Lens CCTV Camera', category: 'CCTV', price: 0, image: '/products/4g 3lens camera.jpeg', rating: 5, badge: 'new', warranty: '6-Month Warranty', description: '4G 3-Lens Outdoor CCTV Camera with PTZ rotation, night vision, motion detection and remote mobile monitoring.', specs: ['4G SIM Supported', '3-Lens Camera System', 'Remote Mobile Monitoring', 'Full-Color Night Vision', 'Motion Detection', 'Two-Way Audio'] },
  
 // ##### TV #####
   

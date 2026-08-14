@@ -328,17 +328,17 @@ useEffect(() => {
                   />
                   <div className="absolute top-3 left-3 flex flex-col gap-2">
 
-                    {p.stock === "in-stock" ? (
-                      <span className="inline-flex w-fit items-center gap-1 rounded-full bg-emerald-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
-                        <CheckCircle2 className="w-3 h-3" />
-                        In Stock
-                      </span>
-                    ) : (
-                      <span className="inline-flex w-fit items-center gap-1 rounded-full bg-red-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
-                        <XCircle className="w-3 h-3" />
-                        Out of Stock
-                      </span>
-                    )}
+                   {p.stock === "in-stock" ? (
+  <span className="inline-flex w-fit items-center gap-1 rounded-full bg-emerald-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
+    <CheckCircle2 className="w-3 h-3" />
+    In Stock
+  </span>
+) : p.stock === "out-of-stock" ? (
+  <span className="inline-flex w-fit items-center gap-1 rounded-full bg-red-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
+    <XCircle className="w-3 h-3" />
+    Out of Stock
+  </span>
+) : null}
 
                     {p.badge === "new" && (
                       <span className="inline-flex w-fit rounded-full bg-green-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
