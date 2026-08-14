@@ -79,7 +79,7 @@ export default function Products() {
 }, [category, accessoryType, search, sort]);
 
 useEffect(() => {
-  setVisibleCount(5);
+  setVisibleCount(4);
 }, [category, accessoryType, search, sort]);
 
   return (
@@ -374,14 +374,30 @@ useEffect(() => {
                   </div>
                   <h3 className="font-display font-semibold text-base mb-1 line-clamp-1">{p.name}</h3>
                   <p className="text-xs text-slate-400 mb-3 line-clamp-2">{p.description}</p>
-                  <div className="flex items-end justify-between">
-                    <div>
-                      {p.oldPrice && <span className="text-xs text-slate-500 line-through mr-2">Rs. {p.oldPrice.toLocaleString()}</span>}
-                      <span className="font-mono font-bold text-lg text-neon-blue">Rs. {p.price.toLocaleString()}</span>
-                    </div>
+                  <div className="flex items-center justify-between">
+  <div>
+    {p.price > 0 ? (
+      <>
+        {p.oldPrice && (
+          <span className="text-xs text-slate-500 line-through mr-2">
+            Rs. {p.oldPrice.toLocaleString()}
+          </span>
+        )}
+
+        <span className="font-mono font-bold text-lg text-neon-blue">
+          Rs. {p.price.toLocaleString()}
+        </span>
+      </>
+    ) : (
+      <span className="font-semibold text-sm text-neon-blue">
+        Contact for Price
+      </span>
+    )}
+  </div>
                     <a
-                      href={`${business.social.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in the ${p.name} (Rs. ${p.price.toLocaleString()}). Is it available?`)}`}
-                      target="_blank"
+href={`${business.social.whatsapp}?text=${encodeURIComponent(
+  `Hi, I'm interested in the ${p.name}. Is it available and what is the current price?`
+)}`}                      target="_blank"
                       rel="noopener noreferrer"
                       className="w-9 h-9 rounded-full bg-[#25D366]/10 hover:bg-[#25D366] flex items-center justify-center transition-colors group/wa"
                       aria-label="WhatsApp inquiry"
@@ -449,11 +465,28 @@ useEffect(() => {
                   <span className="text-sm text-slate-300">{quickView.warranty}</span>
                 </div>
                 <div className="flex items-end justify-between mb-5">
-                  {quickView.oldPrice && <span className="text-sm text-slate-500 line-through mr-2">Rs. {quickView.oldPrice.toLocaleString()}</span>}
-                  <span className="font-mono font-bold text-2xl text-neon-blue">Rs. {quickView.price.toLocaleString()}</span>
-                </div>
+  {quickView.price > 0 ? (
+    <div>
+      {quickView.oldPrice && (
+        <span className="text-sm text-slate-500 line-through mr-2">
+          Rs. {quickView.oldPrice.toLocaleString()}
+        </span>
+      )}
+
+      <span className="font-mono font-bold text-2xl text-neon-blue">
+        Rs. {quickView.price.toLocaleString()}
+      </span>
+    </div>
+  ) : (
+    <span className="font-semibold text-xl text-neon-blue">
+      Contact for Price
+    </span>
+  )}
+</div>
                 <a
-                  href={`${business.social.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in the ${quickView.name} (Rs. ${quickView.price.toLocaleString()}). Is it available?`)}`}
+                  href={`${business.social.whatsapp}?text=${encodeURIComponent(
+  `Hi, I'm interested in the ${quickView.name}. Is it available and what is the current price?`
+)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary w-full"
