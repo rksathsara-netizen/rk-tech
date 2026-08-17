@@ -154,7 +154,7 @@ export default function About() {
                   </h3>
 
                   <p className="mt-3 text-sm text-slate-400">
-                    VTC, Dehiwela, Sri Lanka
+                    Vocational Training Centre (VTC),
                   </p>
 
                   <p className="mt-2 text-sm text-slate-500 leading-relaxed">
@@ -186,7 +186,7 @@ export default function About() {
                   </h3>
 
                   <p className="mt-3 text-sm text-slate-400">
-                    VTC, Dehiwela, Sri Lanka
+                    Vocational Training Centre (VTC),
                   </p>
 
                   <p className="mt-2 text-sm text-slate-500 leading-relaxed">
