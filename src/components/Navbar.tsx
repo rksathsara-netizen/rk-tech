@@ -8,8 +8,12 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+
   const location = useLocation();
 
+  // ----------------------------------------
+  // Navbar scroll effect
+  // ----------------------------------------
   useEffect(() => {
     let ticking = false;
 
@@ -24,16 +28,26 @@ export function Navbar() {
       });
     };
 
-    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('scroll', onScroll, {
+      passive: true,
+    });
 
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
+  // ----------------------------------------
+  // Close mobile menu when page changes
+  // ----------------------------------------
   useEffect(() => {
     setOpen(false);
     setServicesOpen(false);
   }, [location.pathname]);
 
+  // ----------------------------------------
+  // Desktop navigation link styles
+  // ----------------------------------------
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     `relative text-sm font-medium transition-colors hover:text-neon-blue ${
       isActive ? 'text-neon-blue' : 'text-slate-300'
@@ -41,16 +55,15 @@ export function Navbar() {
 
   return (
     <>
+      {/* =====================================================
+          DESKTOP / MAIN NAVBAR
+      ====================================================== */}
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
           scrolled ? 'py-2' : 'py-4'
         }`}
       >
-        <nav
-          className={`mx-auto max-w-7xl px-4 sm:px-6 transition-all duration-500 ${
-            scrolled ? '' : ''
-          }`}
-        >
+        <nav className="mx-auto max-w-7xl px-4 sm:px-6">
           <div
             className={`flex items-center justify-between rounded-2xl px-4 sm:px-6 py-3 transition-all duration-500 ${
               scrolled
@@ -58,8 +71,13 @@ export function Navbar() {
                 : 'bg-transparent border border-transparent'
             }`}
           >
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-2.5 shrink-0">
+            {/* =================================================
+                LOGO
+            ================================================== */}
+            <Link
+              to="/"
+              className="flex items-center gap-2.5 shrink-0"
+            >
               <img
                 src="/logo.svg"
                 alt="RK Tech Solutions"
@@ -77,28 +95,46 @@ export function Navbar() {
               </div>
             </Link>
 
-            {/* Desktop nav */}
+            {/* =================================================
+                DESKTOP NAVIGATION
+            ================================================== */}
             <div className="hidden lg:flex items-center gap-7">
-              <NavLink to="/" className={navLinkClass} end>
+              <NavLink
+                to="/"
+                className={navLinkClass}
+                end
+              >
                 Home
               </NavLink>
 
-              <NavLink to="/about" className={navLinkClass}>
+              <NavLink
+                to="/about"
+                className={navLinkClass}
+              >
                 About
               </NavLink>
 
-              <NavLink to="/products" className={navLinkClass}>
+              <NavLink
+                to="/products"
+                className={navLinkClass}
+              >
                 Products
               </NavLink>
 
-              {/* Services dropdown */}
+              {/* ---------------------------------------------
+                  Services Dropdown
+              ---------------------------------------------- */}
               <div
                 className="relative"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-                <button className="flex items-center gap-1 text-sm font-medium text-slate-300 hover:text-neon-blue transition-colors">
+                <button
+                  type="button"
+                  className="flex items-center gap-1 text-sm font-medium text-slate-300 hover:text-neon-blue transition-colors"
+                >
                   Services
+
                   <ChevronDown
                     className={`w-4 h-4 transition-transform ${
                       servicesOpen ? 'rotate-180' : ''
@@ -137,20 +173,31 @@ export function Navbar() {
                 )}
               </div>
 
-              <NavLink to="/gaming-pcs" className={navLinkClass}>
+              <NavLink
+                to="/gaming-pcs"
+                className={navLinkClass}
+              >
                 Gaming PCs
               </NavLink>
 
-              <NavLink to="/faq" className={navLinkClass}>
+              <NavLink
+                to="/faq"
+                className={navLinkClass}
+              >
                 FAQ
               </NavLink>
 
-              <NavLink to="/contact" className={navLinkClass}>
+              <NavLink
+                to="/contact"
+                className={navLinkClass}
+              >
                 Contact
               </NavLink>
             </div>
 
-            {/* Right actions */}
+            {/* =================================================
+                RIGHT ACTIONS
+            ================================================== */}
             <div className="flex items-center gap-2 sm:gap-3">
               <Magnetic strength={0.2}>
                 <a
@@ -162,9 +209,12 @@ export function Navbar() {
                 </a>
               </Magnetic>
 
+              {/* Mobile menu button */}
               <button
+                type="button"
                 onClick={() => setOpen(!open)}
-                aria-label="Menu"
+                aria-label={open ? 'Close menu' : 'Open menu'}
+                aria-expanded={open}
                 className="lg:hidden w-10 h-10 rounded-full glass flex items-center justify-center"
               >
                 {open ? (
@@ -178,7 +228,9 @@ export function Navbar() {
         </nav>
       </header>
 
-      {/* Mobile menu */}
+      {/* =====================================================
+          MOBILE MENU
+      ====================================================== */}
       <div
         className={`fixed inset-0 z-40 lg:hidden transition-all duration-400 ${
           open
@@ -186,38 +238,66 @@ export function Navbar() {
             : 'opacity-0 pointer-events-none'
         }`}
       >
-        {/* Backdrop */}
+        {/* ---------------------------------------------
+            Backdrop
+        ---------------------------------------------- */}
         <div
           className="absolute inset-0 bg-ink-950/80 backdrop-blur-xl"
           onClick={() => setOpen(false)}
         />
 
-        {/* Mobile drawer */}
+        {/* ---------------------------------------------
+            Mobile Drawer
+        ---------------------------------------------- */}
         <div
           className={`absolute right-0 top-0 bottom-0 w-[85%] max-w-sm glass border-l border-white/10 transition-transform duration-400 ${
             open ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          {/* Scrollable content */}
+          {/* =================================================
+              SCROLLABLE MOBILE CONTENT
+          ================================================== */}
           <div className="h-full overflow-y-auto p-6 pt-24 pb-8">
+            
+            {/* =================================================
+                MAIN LINKS
+            ================================================== */}
             <div className="flex flex-col gap-1">
+              
+              <MobileLink
+                to="/"
+                label="Home"
+              />
 
-              {/* Main pages */}
-              <MobileLink to="/" label="Home" />
+              <MobileLink
+                to="/about"
+                label="About"
+              />
 
-              <MobileLink to="/about" label="About" />
+              <MobileLink
+                to="/products"
+                label="Products"
+              />
 
-              <MobileLink to="/products" label="Products" />
+              <MobileLink
+                to="/gaming-pcs"
+                label="Gaming PCs"
+              />
 
-              <MobileLink to="/gaming-pcs" label="Gaming PCs" />
+              <MobileLink
+                to="/faq"
+                label="FAQ"
+              />
 
-              <MobileLink to="/faq" label="FAQ" />
+              <MobileLink
+                to="/contact"
+                label="Contact"
+              />
 
-              <MobileLink to="/contact" label="Contact" />
-
-              {/* Services accordion */}
+              {/* =================================================
+                  SERVICES
+              ================================================== */}
               <div className="mt-4 border-t border-white/10 pt-4">
-
                 <button
                   type="button"
                   onClick={() => setServicesOpen(!servicesOpen)}
@@ -228,7 +308,9 @@ export function Navbar() {
 
                   <ChevronDown
                     className={`w-5 h-5 transition-transform duration-300 ${
-                      servicesOpen ? 'rotate-180 text-neon-blue' : ''
+                      servicesOpen
+                        ? 'rotate-180 text-neon-blue'
+                        : ''
                     }`}
                   />
                 </button>
@@ -255,28 +337,32 @@ export function Navbar() {
                 </div>
               </div>
 
-              {/* Legal links */}
+              {/* =================================================
+                  MORE / LEGAL
+              ================================================== */}
               <div className="mt-4 border-t border-white/10 pt-4">
-  <div className="pt-2 pb-2 px-3 text-xs font-semibold tracking-widest text-slate-500 uppercase">
-    More
-  </div>
+                
+                <div className="pt-2 pb-2 px-3 text-xs font-semibold tracking-widest text-slate-500 uppercase">
+                  More
+                </div>
 
-  <div className="flex flex-col gap-1">
-    <MobileLink
-      to="/privacy-policy"
-      label="Privacy Policy"
-    />
+                <div className="flex flex-col gap-1">
+                  <MobileLink
+                    to="/privacy-policy"
+                    label="Privacy Policy"
+                  />
 
-    <MobileLink
-      to="/terms"
-      label="Terms & Conditions"
-    />
-  </div>
-</div>
+                  <MobileLink
+                    to="/terms"
+                    label="Terms & Conditions"
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Call button */}
+            {/* =================================================
+                PHONE BUTTON
+            ================================================== */}
             <a
               href={`tel:${business.phoneRaw}`}
               className="btn-primary w-full mt-6"
@@ -286,9 +372,14 @@ export function Navbar() {
             </a>
           </div>
         </div>
+      </div>
     </>
   );
 }
+
+/* ============================================================
+   MOBILE LINK COMPONENT
+============================================================ */
 
 function MobileLink({
   to,
