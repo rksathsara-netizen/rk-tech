@@ -366,10 +366,23 @@ export function ProductCard({ product, delay = 0 }: { product: typeof products[0
         <h3 className="font-display font-semibold text-base mb-1 line-clamp-1">{product.name}</h3>
         <p className="text-xs text-slate-400 mb-3 line-clamp-2">{product.description}</p>
         <div className="flex items-end justify-between">
-          <div>
-            {product.oldPrice && <span className="text-xs text-slate-500 line-through mr-2">Rs. {product.oldPrice.toLocaleString()}</span>}
-            <span className="font-mono font-bold text-lg text-neon-blue">Rs. {product.price.toLocaleString()}</span>
-          </div>
+  <div>
+    {product.oldPrice && (
+      <span className="text-xs text-slate-500 line-through mr-2">
+        Rs. {product.oldPrice.toLocaleString()}
+      </span>
+    )}
+
+    {product.price && product.price > 0 ? (
+      <span className="font-mono font-bold text-lg text-neon-blue">
+        Rs. {product.price.toLocaleString()}
+      </span>
+    ) : (
+      <span className="font-semibold text-base text-neon-blue">
+        Contact for Price
+      </span>
+    )}
+  </div>
           <a
             href={`${business.social.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in the ${product.name} (Rs. ${product.price.toLocaleString()}). Is it available?`)}`}
             target="_blank"

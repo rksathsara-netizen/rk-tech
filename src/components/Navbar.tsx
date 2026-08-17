@@ -12,15 +12,20 @@ export function Navbar() {
 
   useEffect(() => {
     let ticking = false;
+
     const onScroll = () => {
       if (ticking) return;
+
       ticking = true;
+
       requestAnimationFrame(() => {
         setScrolled(window.scrollY > 30);
         ticking = false;
       });
     };
+
     window.addEventListener('scroll', onScroll, { passive: true });
+
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -55,26 +60,36 @@ export function Navbar() {
           >
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2.5 shrink-0">
-  <img
-    src="/logo.svg"
-    alt="RK Tech Solutions"
-    className="w-24 h-auto object-contain"
-  />
+              <img
+                src="/logo.svg"
+                alt="RK Tech Solutions"
+                className="w-24 h-auto object-contain"
+              />
 
-  <div className="hidden sm:block">
-    <div className="font-display font-bold text-base leading-none">
-      RK Tech
-    </div>
-    <div className="text-[11px] tracking-[0.2em] text-slate-400 uppercase">
-      Solutions
-    </div>
-  </div>
-</Link>
+              <div className="hidden sm:block">
+                <div className="font-display font-bold text-base leading-none">
+                  RK Tech
+                </div>
+
+                <div className="text-[11px] tracking-[0.2em] text-slate-400 uppercase">
+                  Solutions
+                </div>
+              </div>
+            </Link>
+
             {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-7">
-              <NavLink to="/" className={navLinkClass} end>Home</NavLink>
-              <NavLink to="/about" className={navLinkClass}>About</NavLink>
-              <NavLink to="/products" className={navLinkClass}>Products</NavLink>
+              <NavLink to="/" className={navLinkClass} end>
+                Home
+              </NavLink>
+
+              <NavLink to="/about" className={navLinkClass}>
+                About
+              </NavLink>
+
+              <NavLink to="/products" className={navLinkClass}>
+                Products
+              </NavLink>
 
               {/* Services dropdown */}
               <div
@@ -83,8 +98,14 @@ export function Navbar() {
                 onMouseLeave={() => setServicesOpen(false)}
               >
                 <button className="flex items-center gap-1 text-sm font-medium text-slate-300 hover:text-neon-blue transition-colors">
-                  Services <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                  Services
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform ${
+                      servicesOpen ? 'rotate-180' : ''
+                    }`}
+                  />
                 </button>
+
                 {servicesOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[640px]">
                     <div className="glass-card p-5 shadow-luxury grid grid-cols-2 gap-1">
@@ -95,11 +116,19 @@ export function Navbar() {
                           className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group"
                         >
                           <div className="w-9 h-9 rounded-lg bg-primary-500/10 flex items-center justify-center shrink-0 group-hover:bg-primary-500/20 transition-colors">
-                            <span className="text-neon-blue font-mono text-xs font-bold">{s.name[0]}</span>
+                            <span className="text-neon-blue font-mono text-xs font-bold">
+                              {s.name[0]}
+                            </span>
                           </div>
+
                           <div>
-                            <div className="text-sm font-semibold text-slate-200 group-hover:text-neon-blue transition-colors">{s.name}</div>
-                            <div className="text-xs text-slate-500 mt-0.5 line-clamp-1">{s.tagline}</div>
+                            <div className="text-sm font-semibold text-slate-200 group-hover:text-neon-blue transition-colors">
+                              {s.name}
+                            </div>
+
+                            <div className="text-xs text-slate-500 mt-0.5 line-clamp-1">
+                              {s.tagline}
+                            </div>
                           </div>
                         </Link>
                       ))}
@@ -108,20 +137,28 @@ export function Navbar() {
                 )}
               </div>
 
-              <NavLink to="/gaming-pcs" className={navLinkClass}>Gaming PCs</NavLink>
-              <NavLink to="/faq" className={navLinkClass}>FAQ</NavLink>
-              <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
+              <NavLink to="/gaming-pcs" className={navLinkClass}>
+                Gaming PCs
+              </NavLink>
+
+              <NavLink to="/faq" className={navLinkClass}>
+                FAQ
+              </NavLink>
+
+              <NavLink to="/contact" className={navLinkClass}>
+                Contact
+              </NavLink>
             </div>
 
             {/* Right actions */}
             <div className="flex items-center gap-2 sm:gap-3">
-
               <Magnetic strength={0.2}>
                 <a
                   href={`tel:${business.phoneRaw}`}
                   className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 text-sm"
                 >
-                  <Phone className="w-4 h-4" /> Call Now
+                  <Phone className="w-4 h-4" />
+                  Call Now
                 </a>
               </Magnetic>
 
@@ -130,7 +167,11 @@ export function Navbar() {
                 aria-label="Menu"
                 className="lg:hidden w-10 h-10 rounded-full glass flex items-center justify-center"
               >
-                {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {open ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
               </button>
             </div>
           </div>
@@ -140,55 +181,128 @@ export function Navbar() {
       {/* Mobile menu */}
       <div
         className={`fixed inset-0 z-40 lg:hidden transition-all duration-400 ${
-          open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          open
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="absolute inset-0 bg-ink-950/80 backdrop-blur-xl" onClick={() => setOpen(false)} />
+        {/* Backdrop */}
         <div
-          className={`absolute right-0 top-0 bottom-0 w-[85%] max-w-sm glass border-l border-white/10 p-6 pt-24 overflow-y-auto transition-transform duration-400 ${
+          className="absolute inset-0 bg-ink-950/80 backdrop-blur-xl"
+          onClick={() => setOpen(false)}
+        />
+
+        {/* Mobile drawer */}
+        <div
+          className={`absolute right-0 top-0 bottom-0 w-[85%] max-w-sm glass border-l border-white/10 transition-transform duration-400 ${
             open ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="flex flex-col gap-1">
-            <MobileLink to="/" label="Home" />
-            <MobileLink to="/about" label="About" />
-            <MobileLink to="/products" label="Products" />
+          {/* Scrollable content */}
+          <div className="h-full overflow-y-auto p-6 pt-24 pb-8">
+            <div className="flex flex-col gap-1">
 
-            <div className="pt-4 pb-2 text-xs font-semibold tracking-widest text-slate-500 uppercase">Services</div>
-            {services.map((s) => (
-              <Link
-                key={s.id}
-                to={`/services/${s.slug}`}
-                className="py-2.5 px-3 rounded-lg text-sm text-slate-300 hover:text-neon-blue hover:bg-white/5 transition-colors"
-              >
-                {s.name}
-              </Link>
-            ))}
+              {/* Main pages */}
+              <MobileLink to="/" label="Home" />
 
-            <div className="pt-4 pb-2 text-xs font-semibold tracking-widest text-slate-500 uppercase">More</div>
-            <MobileLink to="/gaming-pcs" label="Gaming PCs" />
-            <MobileLink to="/faq" label="FAQ" />
-            <MobileLink to="/contact" label="Contact" />
-            <MobileLink to="/privacy-policy" label="Privacy Policy" />
-            <MobileLink to="/terms" label="Terms & Conditions" />
+              <MobileLink to="/about" label="About" />
+
+              <MobileLink to="/products" label="Products" />
+
+              <MobileLink to="/gaming-pcs" label="Gaming PCs" />
+
+              <MobileLink to="/faq" label="FAQ" />
+
+              <MobileLink to="/contact" label="Contact" />
+
+              {/* Services accordion */}
+              <div className="mt-4 border-t border-white/10 pt-4">
+
+                <button
+                  type="button"
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  aria-expanded={servicesOpen}
+                  className="w-full flex items-center justify-between py-3 px-3 rounded-lg text-sm font-semibold tracking-widest text-slate-400 uppercase hover:text-neon-blue hover:bg-white/5 transition-colors"
+                >
+                  <span>Services</span>
+
+                  <ChevronDown
+                    className={`w-5 h-5 transition-transform duration-300 ${
+                      servicesOpen ? 'rotate-180 text-neon-blue' : ''
+                    }`}
+                  />
+                </button>
+
+                {/* Services list */}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    servicesOpen
+                      ? 'max-h-[1000px] opacity-100 mt-1'
+                      : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="pl-2">
+                    {services.map((s) => (
+                      <Link
+                        key={s.id}
+                        to={`/services/${s.slug}`}
+                        className="block py-2.5 px-3 rounded-lg text-sm text-slate-300 hover:text-neon-blue hover:bg-white/5 transition-colors"
+                      >
+                        {s.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Legal links */}
+              <div className="mt-4 border-t border-white/10 pt-4">
+                <div className="pt-2 pb-2 px-3 text-xs font-semibold tracking-widest text-slate-500 uppercase">
+                  More
+                </div>
+
+                <MobileLink
+                  to="/privacy-policy"
+                  label="Privacy Policy"
+                />
+
+                <MobileLink
+                  to="/terms"
+                  label="Terms & Conditions"
+                />
+              </div>
+            </div>
+
+            {/* Call button */}
+            <a
+              href={`tel:${business.phoneRaw}`}
+              className="btn-primary w-full mt-6"
+            >
+              <Phone className="w-4 h-4" />
+              {business.phone}
+            </a>
           </div>
-
-          <a href={`tel:${business.phoneRaw}`} className="btn-primary w-full mt-6">
-            <Phone className="w-4 h-4" /> {business.phone}
-          </a>
         </div>
       </div>
     </>
   );
 }
 
-function MobileLink({ to, label }: { to: string; label: string }) {
+function MobileLink({
+  to,
+  label,
+}: {
+  to: string;
+  label: string;
+}) {
   return (
     <NavLink
       to={to}
       className={({ isActive }) =>
         `py-3 px-3 rounded-lg text-base font-medium transition-colors ${
-          isActive ? 'text-neon-blue bg-neon-blue/10' : 'text-slate-200 hover:bg-white/5'
+          isActive
+            ? 'text-neon-blue bg-neon-blue/10'
+            : 'text-slate-200 hover:bg-white/5'
         }`
       }
     >
