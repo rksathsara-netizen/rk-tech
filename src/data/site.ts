@@ -245,7 +245,7 @@ export const brands = [
   'ASUS', 'Dell', 'HP', 'Lenovo', 'Acer', 'Apple', 'Samsung', 'MSI', 'Logitech', 'Razer', 'Corsair', 'Intel', 'AMD', 'NVIDIA',
 ];
 
-export const productCategories = ['All', 'Mobile & Accessories', 'Electronics & Accessories', 'Components & Accessories', 'Desktop & Monitors', 'Laptops', 'CCTV', 'TV'];
+export const productCategories = ['All', 'Components & Accessories', 'Desktop & Monitors', 'Laptops', 'CCTV', 'TV'];
 
 export const faqs = [
   
