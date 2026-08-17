@@ -261,15 +261,23 @@ export function Navbar() {
                   More
                 </div>
 
-                <MobileLink
-                  to="/privacy-policy"
-                  label="Privacy Policy"
-                />
+                <div className="mt-4 border-t border-white/10 pt-4">
+  <div className="pt-2 pb-2 px-3 text-xs font-semibold tracking-widest text-slate-500 uppercase">
+    More
+  </div>
 
-                <MobileLink
-                  to="/terms"
-                  label="Terms & Conditions"
-                />
+  <div className="flex flex-col gap-1">
+    <MobileLink
+      to="/privacy-policy"
+      label="Privacy Policy"
+    />
+
+    <MobileLink
+      to="/terms"
+      label="Terms & Conditions"
+    />
+  </div>
+</div>
               </div>
             </div>
 
