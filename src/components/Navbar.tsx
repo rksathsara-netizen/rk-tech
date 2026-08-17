@@ -173,12 +173,12 @@ export function Navbar() {
                 )}
               </div>
 
-              <NavLink
+              {/* <NavLink
                 to="/gaming-pcs"
                 className={navLinkClass}
               >
                 Gaming PCs
-              </NavLink>
+              </NavLink> */}
 
               <NavLink
                 to="/faq"
