@@ -47,7 +47,7 @@ export const business = {
   hours: 'Mon–Sat: 9AM – 8PM | Sun: 10AM – 5PM',
   mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31686.5!2d79.92!3d6.80!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDgnMDYuNCJOIDc5wrA1NSc0MS43IkU!5e0!3m2!1sen!2slk!4v1700000000000',
   social: {
-    facebook: 'https://www.facebook.com/rktechsolutions',
+    facebook: 'https://www.facebook.com/profile.php?id=61592411213078',
     instagram: 'https://www.instagram.com/rktechsolutions',
     whatsapp: 'https://wa.me/94756789046',
     youtube: 'https://www.youtube.com/@rktechsolutions',
@@ -213,8 +213,7 @@ export const products: Product[] = [
     // #Coponents#
        { id: 'p1', name: 'Kim MID 128GB mSATA SSD', category: 'Components & Accessories', subcategory: 'Components', price: 0, image: '/products/msata.jpeg', rating: 4, badge: 'Used', warranty: '3-Month Warranty', description: 'Kim MID 128GB mSATA SSD, 3.3V 1A interface, suitable for compatible laptops and compact systems.', specs: ['128GB Capacity', 'mSATA Interface', '3.3V / 1A', 'Kim MID Brand', 'Model: T900-128GB'] },
        { id: 'p13', name: 'DDR4 8GB Desktop RAM', category: 'Components & Accessories', subcategory: 'Components', price: 0, image: '/products/ddr4 8gb desktop.jpeg', rating: 4, badge: 'Used', warranty: '3-Month Warranty', description: 'Reliable 8GB DDR4 desktop RAM, suitable for compatible desktop computers and PC upgrades.', specs: ['8GB DDR4 RAM', 'Desktop DIMM', '2Rx8 Memory', 'Compatible with DDR4 Motherboards', 'PC4-2133P'] },
-       { id: 'p14', name: 'HDD 1TB',  category: 'Components & Accessories', subcategory: 'Components', price: 0, image: '/products/1tb.jpeg', rating: 4, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
- 
+       { id: 'p14', name: 'HDD 1TB', category: 'Components & Accessories', subcategory: 'Components', price: 0, image: '/products/1tb.jpeg', rating: 4, badge: 'Used', warranty: '2-Year Warranty', description: 'Reliable 1TB hard disk drive suitable for desktop computers, laptops, storage upgrades and data backup.', specs: ['1TB Storage Capacity', 'HDD Storage', 'SATA Interface', 'Desktop & Laptop Compatible', 'Suitable for Data Storage & Backup'] }, 
     // #Accessories#
 
 
@@ -224,7 +223,7 @@ export const products: Product[] = [
  
  // ####### *CCTV* #####
        { id: 'p15', name: '4G 3-Lens CCTV Camera', category: 'CCTV', price: 0, image: '/products/4g 3lens camera.jpeg', rating: 5, badge: 'new', warranty: '6-Month Warranty', description: '4G 3-Lens Outdoor CCTV Camera with PTZ rotation, night vision, motion detection and remote mobile monitoring.', specs: ['4G SIM Supported', '3-Lens Camera System', 'Remote Mobile Monitoring', 'Full-Color Night Vision', 'Motion Detection', 'Two-Way Audio'] },
-       { id: 'p15', name: '4G Dual-Lens CCTV Camera', category: 'CCTV', price: 0, image: '/products/4g 2lens camera.jpeg', rating: 5, badge: 'new', warranty: '6-Month Warranty', description: '4G Dual-Lens Outdoor CCTV Camera with PTZ rotation, full-color night vision, motion detection and remote mobile monitoring. Ideal for homes, shops, offices and outdoor security.', specs: ['4G SIM Supported', 'Dual-Lens Camera System', 'PTZ Pan & Tilt Rotation', 'Full-Color Night Vision', 'Motion Detection', 'Remote Mobile Monitoring', 'Two-Way Audio', 'Outdoor Security Camera'] },
+       { id: 'p20', name: '4G Dual-Lens CCTV Camera', category: 'CCTV', price: 0, image: '/products/4g 2lens camera.jpeg', rating: 5, badge: 'new', warranty: '6-Month Warranty', description: '4G Dual-Lens Outdoor CCTV Camera with PTZ rotation, full-color night vision, motion detection and remote mobile monitoring. Ideal for homes, shops, offices and outdoor security.', specs: ['4G SIM Supported', 'Dual-Lens Camera System', 'PTZ Pan & Tilt Rotation', 'Full-Color Night Vision', 'Motion Detection', 'Remote Mobile Monitoring', 'Two-Way Audio', 'Outdoor Security Camera'] },
        { id: 'p19', name: '4G Single-Lens V380 Pro Camera', category: 'CCTV', price: 0, image: '/products/4g single lens v380 pro camera.jpeg', rating: 5, badge: 'new', warranty: '6-Month Warranty', description: '4G Single-Lens V380 Pro Outdoor CCTV Camera with PTZ rotation, full-color night vision, motion detection and remote mobile monitoring. Ideal for homes, shops, offices and outdoor security.', specs: ['4G SIM Supported', 'Single-Lens Camera System', 'V380 Pro App Support', 'PTZ Pan & Tilt Rotation', 'Full-Color Night Vision', 'Motion Detection', 'Remote Mobile Monitoring', 'Two-Way Audio', 'Outdoor Security Camera'] },
 
        { id: 'p16', name: 'SanDisk Ultra 128/64/32 GB microSDXC Memory Card', category: 'CCTV', price: 0, image: '/products/sandisk ultra 128gb.jpeg', rating: 5, badge: 'new', warranty: '6-Month Warranty', description: 'SanDisk Ultra 128GB microSDXC memory card with UHS-I interface, Class 10 performance and A1 application rating. Ideal for smartphones, CCTV cameras, tablets, action cameras and other compatible devices.', specs: ['128/64/32 Storage Capacity', 'microSDXC Memory Card', 'UHS-I Interface', 'Class 10 Speed Rating', 'A1 Application Performance', 'Ideal for CCTV Cameras', 'Suitable for Smartphones & Tablets', 'Reliable Storage & Recording'] },
