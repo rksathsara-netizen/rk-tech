@@ -257,11 +257,6 @@ export function Navbar() {
 
               {/* Legal links */}
               <div className="mt-4 border-t border-white/10 pt-4">
-                <div className="pt-2 pb-2 px-3 text-xs font-semibold tracking-widest text-slate-500 uppercase">
-                  More
-                </div>
-
-                <div className="mt-4 border-t border-white/10 pt-4">
   <div className="pt-2 pb-2 px-3 text-xs font-semibold tracking-widest text-slate-500 uppercase">
     More
   </div>
@@ -291,7 +286,6 @@ export function Navbar() {
             </a>
           </div>
         </div>
-      </div>
     </>
   );
 }
