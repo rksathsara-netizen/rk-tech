@@ -73,7 +73,7 @@ export function Footer() {
                 { label: 'Home', to: '/' },
                 { label: 'About Us', to: '/about' },
                 { label: 'Products', to: '/products' },
-                { label: 'Gaming PCs', to: '/gaming-pcs' },
+                // { label: 'Gaming PCs', to: '/gaming-pcs' },
                 { label: 'FAQ', to: '/faq' },
                 { label: 'Contact', to: '/contact' },
               ].map((l) => (

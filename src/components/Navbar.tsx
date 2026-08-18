@@ -279,10 +279,10 @@ export function Navbar() {
                 label="Products"
               />
 
-              <MobileLink
+              {/* <MobileLink
                 to="/gaming-pcs"
                 label="Gaming PCs"
-              />
+              /> */}
 
               <MobileLink
                 to="/faq"
