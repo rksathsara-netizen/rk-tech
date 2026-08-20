@@ -401,6 +401,180 @@ export const products: Product[] = [
     ],
   },
   // #Accessories#
+    {
+    id: 'p20',
+    name: 'Premium Refill Ink YCM/BK',
+    category: 'Components & Accessories',
+    subcategory: 'Accessories',
+    price: 0,
+    image: '/products/refill-ink-ycm-bk.jpeg',
+    rating: 4.5,
+    badge: 'new',
+    warranty: 'Warranty Included',
+    description:
+      'High-quality refill ink available in Yellow, Magenta, Cyan and Black for compatible inkjet printers.',
+    specs: [
+      'Yellow (Y)',
+      'Magenta (M)',
+      'Cyan (C)',
+      'Black (BK)',
+      'Printer Refill Ink',
+    ],
+  },
+
+  {
+    id: 'p21',
+    name: 'Premium Ink HGT51 / HGT52',
+    category: 'Components & Accessories',
+    subcategory: 'Accessories',
+    price: 0,
+    image: '/products/hgt51-hgt52-ink.jpg',
+    rating: 4.5,
+    badge: 'new',
+    warranty: 'Warranty Included',
+    description:
+      'Premium refill ink for compatible HP DeskJet GT Series printers. Available in Black, Cyan, Magenta and Yellow.',
+    specs: [
+      'HGT51 Black',
+      'HGT52 Cyan',
+      'HGT52 Magenta',
+      'HGT52 Yellow',
+      'Black: 90ml',
+      'Colour: 70ml',
+    ],
+  },
+
+  {
+    id: 'p23',
+    name: 'HP M10 Wired Mouse',
+    category: 'Components & Accessories',
+    subcategory: 'Accessories',
+    price: 0,
+    image: '/products/hp-m10-wired-mouse.jpg',
+    rating: 4.5,
+    badge: 'new',
+    warranty: 'Warranty Included',
+    description:
+      'HP M10 wired optical mouse with USB plug-and-play connectivity and comfortable design.',
+    specs: [
+      'Brand: HP',
+      'Model: M10',
+      'Wired USB',
+      'Optical Sensor',
+      '3 Buttons',
+      'Plug & Play',
+    ],
+  },
+
+  {
+    id: 'p24',
+    name: 'Kisonli V350 USB Speakers',
+    category: 'Components & Accessories',
+    subcategory: 'Accessories',
+    price: 0,
+    image: '/products/kisonli-v350-speakers.jpg',
+    rating: 4.5,
+    badge: 'new',
+    warranty: 'Warranty Included',
+    description:
+      'Kisonli V350 compact USB multimedia speakers with a stylish design, suitable for computers and laptops.',
+    specs: [
+      'Brand: Kisonli',
+      'Model: V350',
+      'USB Powered',
+      '2.0 Channel',
+      'Compact Design',
+      'Suitable for PC & Laptop',
+    ],
+  },
+
+  {
+    id: 'p25',
+    name: 'AOC KM100 Keyboard & Mouse Set',
+    category: 'Components & Accessories',
+    subcategory: 'Accessories',
+    price: 0,
+    image: '/products/aoc-km100-keyboard-mouse.jpg',
+    rating: 4.5,
+    badge: 'new',
+    warranty: 'Warranty Included',
+    description:
+      'AOC KM100 keyboard and mouse combo with comfortable typing and reliable optical tracking.',
+    specs: [
+      'Brand: AOC',
+      'Model: KM100',
+      'Keyboard + Mouse',
+      'Comfortable Typing',
+      '800 DPI Tracking Engine',
+      'Ultra-Slim Design',
+    ],
+  },
+
+  {
+    id: 'p26',
+    name: 'Mikuso KB-039V Wired Keyboard',
+    category: 'Components & Accessories',
+    subcategory: 'Accessories',
+    price: 0,
+    image: '/products/mikuso-kb039v-keyboard.jpg',
+    rating: 4.5,
+    badge: 'new',
+    warranty: '2 Years Warranty',
+    description:
+      'Mikuso KB-039V wired full-size keyboard designed for business and office use.',
+    specs: [
+      'Brand: Mikuso',
+      'Model: KB-039V',
+      '104 Standard Keys',
+      'USB Interface',
+      'Comfortable Feel',
+      'Multi-Device Compatible',
+    ],
+  },
+
+  {
+    id: 'p27',
+    name: 'HP X500 Wired Mouse',
+    category: 'Components & Accessories',
+    subcategory: 'Accessories',
+    price: 0,
+    image: '/products/hp-x500-wired-mouse.jpg',
+    rating: 4.5,
+    badge: 'new',
+    warranty: 'Warranty Included',
+    description:
+      'HP X500 wired optical mouse with USB connectivity and three-button design.',
+    specs: [
+      'Brand: HP',
+      'Model: X500',
+      'USB Connection',
+      'Optical Sensor',
+      '3 Buttons',
+      'Wired Mouse',
+    ],
+  },
+
+  {
+    id: 'p28',
+    name: 'Dell MS116 Optical Mouse',
+    category: 'Components & Accessories',
+    subcategory: 'Accessories',
+    price: 0,
+    image: '/products/dell-ms116-optical-mouse.jpg',
+    rating: 4.5,
+    badge: 'new',
+    warranty: 'Warranty Included',
+    description:
+      'Dell MS116 optical wired mouse with USB connectivity, suitable for everyday office and computer use.',
+    specs: [
+      'Brand: Dell',
+      'Model: MS116',
+      'Optical Sensor',
+      'USB Connection',
+      'Wired Mouse',
+      'Windows Compatible',
+    ],
+  },
 
   // ####### *Desktop & Monitors* #####
 
