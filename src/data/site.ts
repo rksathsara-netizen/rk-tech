@@ -306,18 +306,18 @@ export const products: Product[] = [
   // { id: 'p13', name: 'DDR4 8GB Desktop RAM', stock: "in-stock", category: 'Laptops', price: 0, image: '/products/ddr4 8gb desktop.jpeg', rating: 5, badge: 'Used', warranty: '3-Month Warranty', description: 'Reliable 8GB DDR4 desktop RAM, suitable for compatible desktop computers and PC upgrades.', specs: ['8GB DDR4 RAM', 'Desktop DIMM', '2Rx8 Memory', 'Compatible with DDR4 Motherboards', 'PC4-2133P'] },
   // { id: 'p14', name: 'HDD 1TB', category: 'Components & Accessories', subcategory: 'Components', price: 1500, oldPrice: 100, image: '/products/1tb.jpeg', rating: 5, badge: 'Used', warranty: '2-Year Warranty', description: 'Intel i9, RTX 4070, 16GB DDR5, 1TB SSD, 16" QHD 240Hz', specs: ['Intel Core i9-14900HX', 'RTX 4070 8GB', '16GB DDR5', '1TB NVMe SSD', '16" QHD 240Hz'] },
 
-  // ####### *Mobile & Accessories* #####
-  // #Mobile#
+  // ############################################################################## *Mobile & Accessories* #####
+  // ############Mobile#
 
-  // #Accessories#
+  // ###########Accessories#
 
-  // ####### *Electronics & Accessories* #####
-  // #Electronics#
+  // ############################################################################# *Electronics & Accessories* #####
+  // ###########Electronics#
 
-  // #Accessories#
+  // ############Accessories#
 
-  // ####### *Coponents & Accessories* #####
-  // #Coponents#
+  // ############################################################################ *Coponents & Accessories* #####
+  // ############Coponents#
   {
     id: "p1",
     name: "Kim MID 128GB mSATA SSD",
@@ -400,7 +400,7 @@ export const products: Product[] = [
       "Suitable for Data Storage & Backup",
     ],
   },
-  // #Accessories#
+  // ###############Accessories#
   {
     id: "p20",
     name: "Premium Refill Ink YCM/BK",
@@ -576,7 +576,7 @@ export const products: Product[] = [
     ],
   },
 
-  // ####### *Desktop & Monitors* #####
+  // ############################################################################ *Desktop & Monitors* #####
 
   {
     id: "p33",
@@ -598,9 +598,68 @@ export const products: Product[] = [
     ],
   },
 
-  // ####### *Laptop* #####
+  // ################################################################################################ *Laptop* #####
+ {
+    id: "p35",
+    name: "Dell latitude 5490",
+    category: "Laptop",
+    price: 0,
+    image: "/products/4g 3lens camera.jpe",
+    rating: 4,
+    badge: "Used",
+    warranty: "3-Month Warranty",
+    description:
+      "Dell Latitude 5490 with Intel Core i5 8th Gen processor, 8GB DDR4 RAM and 256GB NVMe SSD. A reliable 14-inch business laptop suitable for office work, studies, browsing, programming and everyday use. Charger and laptop bag included.",
+    specs: [
+      "Intel Core i5 8th Gen Processor",
+"8GB DDR4 RAM",
+"256GB M.2 NVMe SSD",
+"14-inch Display",
+"Intel UHD Graphics 620",
+"Wi-Fi & Bluetooth",
+"USB 3.1 Ports",
+"USB Type-C with DisplayPort",
+"HDMI Port",
+"VGA Port",
+"RJ-45 Ethernet Port",
+"SD Card Reader",
+"Built-in Webcam & Microphone",
+"Charger Included",
+"Laptop Bag Included",
+"3-Month Warranty",
+"Used / Refurbished Condition"
+],
+  },
+  
+   {
+    id: "p36",
+    name: "HP ProBook Notebook",
+    category: "Laptop",
+    price: 0,
+    image: "/products/4g 3lens camera.jpe",
+    rating: 4,
+    badge: "Used",
+    warranty: "3-Month Warranty",
+    description:
+      "HP ProBook Notebook powered by an Intel Core i7 6th Gen processor with 8GB RAM. A reliable business laptop suitable for office work, studies, browsing, entertainment and everyday use.",
+    specs: [
+       "Intel Core i7-6500U Processor",
+    "6th Gen Intel Core i7",
+    "2.50GHz Processor Speed",
+    "Up to 2.59GHz",
+    "8GB RAM",
+    "64-bit Operating System",
+    "x64-based Processor",
+    "No Pen or Touch Support",
+    "HP ProBook Series",
+    "Suitable for Office Work",
+    "Suitable for Studies & Browsing",
+    "Used Laptop",
+    "3-Month Warranty"
+    ],
+  },
 
-  // ####### *CCTV* #####
+  // ####################################################################################### *CCTV* #####
   {
     id: "p15",
     name: "4G 3-Lens CCTV Camera",
@@ -689,7 +748,33 @@ export const products: Product[] = [
       "Reliable Storage & Recording",
     ],
   },
-  // ##### TV #####
+  // ################################################################################################# TV #####
+  {
+  id: "p37",
+  name: "TV Display Replacement",
+  category: "TV",
+  price: 0,
+  image: "/products/tv display replacement.jpe",
+  rating: 5,
+  badge: "new",
+  warranty: "Service Warranty",
+  description:
+    "TV display replacement service available for 32-inch, 42-inch and 55-inch TVs. We provide display replacement solutions for damaged, cracked, broken or faulty TV screens, subject to model and panel availability.",
+  specs: [
+    "32-inch TV Display Replacement",
+    "42-inch TV Display Replacement",
+    "55-inch TV Display Replacement",
+    "Suitable for LED TVs",
+    "Suitable for Smart TVs",
+    "Cracked Screen Replacement",
+    "Broken Display Replacement",
+    "Faulty Display Replacement",
+    "Panel Availability Check Required",
+    "TV Model Compatibility Check",
+    "Professional Replacement Service",
+    "Replacement Service Available"
+  ]
+},
 ];
 
 export const reviews: Review[] = [
