@@ -602,7 +602,7 @@ export const products: Product[] = [
  {
     id: "p35",
     name: "Dell latitude 5490",
-    category: "Laptop",
+    category: "Laptops",
     price: 0,
     image: "/products/4g 3lens camera.jpe",
     rating: 4,
@@ -634,7 +634,7 @@ export const products: Product[] = [
    {
     id: "p36",
     name: "HP ProBook Notebook",
-    category: "Laptop",
+    category: "Laptops",
     price: 0,
     image: "/products/4g 3lens camera.jpe",
     rating: 4,
