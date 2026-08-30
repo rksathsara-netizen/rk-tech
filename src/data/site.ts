@@ -121,7 +121,7 @@ export const services: Service[] = [
   },
   {
     id: "networking",
-    name: "Networking",
+    name: "Networkin",
     slug: "networking",
     icon: "Network",
     tagline: "Home and office network setup and troubleshooting",
